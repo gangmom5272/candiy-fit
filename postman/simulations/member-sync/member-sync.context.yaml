@@ -1,0 +1,38 @@
+purpose:
+  stands_in_for: CANDiY client-credentials and 13 metric GETs, synthetic records only.
+  unblocks: Backend 223 POST to real PostgreSQL and follow-up GET verification.
+assumptions:
+  - id: candiy-contract
+    status: supported
+    claim: The modeled routes follow the repository's documented CANDiY subset.
+    reason: Requests must use authenticated end_user_id and the documented period parameters.
+    verification: Model was derived from data/docs/candiy-api.md; real provider behavior was not rechecked.
+    source: data/docs/candiy-api.md; postman/mocks/candiy-sync/default.js
+    updated_at: '2026-10-30'
+  - id: sync-boundary
+    status: supported
+    claim: Backend POST persists and aggregates the supplied record before returning SYNCED.
+    reason: An HTTP success alone does not prove that subsequent GETs can read the record.
+    verification: >-
+      On 2026-10-30 thirteen integration scenarios passed with the same handler
+      served directly by Node and real dedicated PostgreSQL. POST inserted
+      raw records, daily aggregates and scores; GET returned the seeded steps.
+      Partial failure, all-404, auth failure, delayed completion, scheduler
+      advisory-lock contention and recent-attempt recovery were exercised.
+      Malformed token JSON, missing access_token and invalid expires_in each
+      returned backend 503 CANDIY_AUTH_FAILED with one token POST and no metric
+      GETs. A fresh execution recovered after the existing recent-attempt window.
+      All 13 metrics returning 404 produced matching POST/GET 409
+      CANDIY_USER_NOT_LINKED responses. Partial 404 and mixed 404/503 remained
+      backend 503 METRIC_FAILED; all-empty success responses remained SYNCED.
+      Postman CLI 1.75.0 could not finish dataset-engine preparation; no
+      successful Postman simulation-run or request-log claim is made.
+    source: backend/tests/health/test_sync_simulation_db.py
+    updated_at: '2026-10-30'
+  - id: production-mapping
+    status: unknown
+    claim: The actual production app and web use the same member UUID and CANDiY credentials.
+    reason: A loopback simulation cannot establish production configuration or uploaded records.
+    verification: Requires permitted production account verification outside this simulation.
+    source: S15P31A403-223; S15P31A403-227
+    updated_at: '2026-10-30'

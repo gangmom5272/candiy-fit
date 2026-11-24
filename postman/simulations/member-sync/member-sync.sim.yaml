@@ -1,0 +1,6 @@
+simulation: member-sync
+routing: path
+mocks:
+  - name: candiy-sync
+    routeKey: candiy
+    path: postman/mocks/candiy-sync/config.yaml

@@ -1,0 +1,505 @@
+{
+  "source": {
+    "commit": "3c6752ea69f62b3a0a52f4fc16e8a9083c5c3202",
+    "sleep_reference_commit": "ee0e1a2bfbbdcf0630f6a03fb4725bf620eb1e3c",
+    "cwd": "data/pipeline",
+    "command": "uv run python -m candiy_pipeline.sleep_reference --persona synth-11",
+    "fixture": "ai/eval/datasets/golden/fixtures/synth-11.json",
+    "fixture_data_sha256": "d18c831a4212d0723fa6fd679e9582986490b4480245569748976eb03c50fa9f"
+  },
+  "output": {
+    "pattern": {
+      "analysis": "pattern",
+      "period": {
+        "start": "2026-10-09",
+        "end": "2026-10-22"
+      },
+      "baseline_period": {
+        "start": "2026-09-11",
+        "end": "2026-10-08"
+      },
+      "nights": 14,
+      "enough_data": true,
+      "bedtime": {
+        "avg": "01:37",
+        "sd_min": 116,
+        "nights": 14
+      },
+      "waketime": {
+        "avg": "07:56",
+        "sd_min": 126,
+        "nights": 14
+      },
+      "midpoint_gap_min": {
+        "min": 119,
+        "weekday_nights": 10,
+        "weekend_nights": 4
+      },
+      "waketime_gap_min": {
+        "min": 220,
+        "weekday_nights": 10,
+        "weekend_nights": 4
+      },
+      "sleep_avg_min": {
+        "value": 356,
+        "nights": 14
+      },
+      "efficiency_avg_pct": {
+        "value": 94,
+        "nights": 14
+      },
+      "awake_avg_min": {
+        "value": 24,
+        "nights": 14
+      },
+      "deep_ratio_avg_pct": {
+        "value": 13,
+        "nights": 14
+      },
+      "sleep_vs_baseline": {
+        "recent_avg": 356,
+        "baseline_avg": 423,
+        "diff": -67,
+        "recent_nights": 14,
+        "baseline_nights": 28,
+        "recent_reliable": true,
+        "baseline_reliable": true
+      },
+      "deep_ratio_vs_baseline": {
+        "recent_avg_pct": 13,
+        "baseline_avg_pct": 17,
+        "change_pct": -20,
+        "recent_nights": 14,
+        "baseline_nights": 28
+      },
+      "problems": [
+        {
+          "type": "short",
+          "value": 356,
+          "threshold": 420,
+          "nights": 14
+        },
+        {
+          "type": "declining",
+          "value": -67,
+          "baseline": 423,
+          "threshold": -60,
+          "nights": 14,
+          "baseline_nights": 28
+        },
+        {
+          "type": "irregular",
+          "bedtime_sd_min": 116,
+          "midpoint_gap_min": 119,
+          "threshold": 60,
+          "nights": 14
+        },
+        {
+          "type": "low_deep",
+          "value": 13,
+          "baseline": 17,
+          "change_pct": -20,
+          "nights": 14,
+          "baseline_nights": 28
+        }
+      ],
+      "not_judged": []
+    },
+    "factors": {
+      "analysis": "factors",
+      "period": {
+        "start": "2026-09-25",
+        "end": "2026-10-22"
+      },
+      "nights": 28,
+      "enough_data": true,
+      "conditions": [
+        {
+          "condition": "exercise",
+          "excluded_days": 0,
+          "sleep_minutes": {
+            "true_avg": 438,
+            "true_nights": 8,
+            "false_avg": 376,
+            "false_nights": 20,
+            "diff": 61,
+            "enough_data": true
+          },
+          "deep_minutes": {
+            "true_avg": 83,
+            "true_nights": 8,
+            "false_avg": 51,
+            "false_nights": 20,
+            "diff": 33,
+            "enough_data": true
+          },
+          "efficiency_pct": {
+            "true_avg": 96,
+            "true_nights": 8,
+            "false_avg": 95,
+            "false_nights": 20,
+            "diff": 1,
+            "enough_data": true
+          },
+          "awake_minutes": {
+            "true_avg": 18,
+            "true_nights": 8,
+            "false_avg": 20,
+            "false_nights": 20,
+            "diff": -2,
+            "enough_data": true
+          },
+          "sleep_hr_avg": {
+            "true_avg": 58,
+            "true_nights": 8,
+            "false_avg": 62,
+            "false_nights": 20,
+            "diff": -5,
+            "enough_data": true
+          }
+        },
+        {
+          "condition": "late_exercise",
+          "excluded_days": 20,
+          "sleep_minutes": {
+            "true_avg": null,
+            "true_nights": 0,
+            "false_avg": 438,
+            "false_nights": 8,
+            "diff": null,
+            "enough_data": false
+          },
+          "deep_minutes": {
+            "true_avg": null,
+            "true_nights": 0,
+            "false_avg": 83,
+            "false_nights": 8,
+            "diff": null,
+            "enough_data": false
+          },
+          "efficiency_pct": {
+            "true_avg": null,
+            "true_nights": 0,
+            "false_avg": 96,
+            "false_nights": 8,
+            "diff": null,
+            "enough_data": false
+          },
+          "awake_minutes": {
+            "true_avg": null,
+            "true_nights": 0,
+            "false_avg": 18,
+            "false_nights": 8,
+            "diff": null,
+            "enough_data": false
+          },
+          "sleep_hr_avg": {
+            "true_avg": null,
+            "true_nights": 0,
+            "false_avg": 58,
+            "false_nights": 8,
+            "diff": null,
+            "enough_data": false
+          }
+        },
+        {
+          "condition": "high_steps",
+          "excluded_days": 0,
+          "sleep_minutes": {
+            "true_avg": 422,
+            "true_nights": 14,
+            "false_avg": 366,
+            "false_nights": 14,
+            "diff": 56,
+            "enough_data": true
+          },
+          "deep_minutes": {
+            "true_avg": 72,
+            "true_nights": 14,
+            "false_avg": 47,
+            "false_nights": 14,
+            "diff": 25,
+            "enough_data": true
+          },
+          "efficiency_pct": {
+            "true_avg": 96,
+            "true_nights": 14,
+            "false_avg": 94,
+            "false_nights": 14,
+            "diff": 2,
+            "enough_data": true
+          },
+          "awake_minutes": {
+            "true_avg": 16,
+            "true_nights": 14,
+            "false_avg": 23,
+            "false_nights": 14,
+            "diff": -7,
+            "enough_data": true
+          },
+          "sleep_hr_avg": {
+            "true_avg": 59,
+            "true_nights": 14,
+            "false_avg": 63,
+            "false_nights": 14,
+            "diff": -5,
+            "enough_data": true
+          }
+        },
+        {
+          "condition": "short_prev_night",
+          "excluded_days": 0,
+          "sleep_minutes": {
+            "true_avg": 367,
+            "true_nights": 6,
+            "false_avg": 401,
+            "false_nights": 22,
+            "diff": -34,
+            "enough_data": true
+          },
+          "deep_minutes": {
+            "true_avg": 45,
+            "true_nights": 6,
+            "false_avg": 64,
+            "false_nights": 22,
+            "diff": -19,
+            "enough_data": true
+          },
+          "efficiency_pct": {
+            "true_avg": 95,
+            "true_nights": 6,
+            "false_avg": 95,
+            "false_nights": 22,
+            "diff": -1,
+            "enough_data": true
+          },
+          "awake_minutes": {
+            "true_avg": 20,
+            "true_nights": 6,
+            "false_avg": 19,
+            "false_nights": 22,
+            "diff": 1,
+            "enough_data": true
+          },
+          "sleep_hr_avg": {
+            "true_avg": 64,
+            "true_nights": 6,
+            "false_avg": 60,
+            "false_nights": 22,
+            "diff": 4,
+            "enough_data": true
+          }
+        },
+        {
+          "condition": "late_bedtime_streak",
+          "excluded_days": 7,
+          "sleep_minutes": {
+            "true_avg": 308,
+            "true_nights": 1,
+            "false_avg": 409,
+            "false_nights": 20,
+            "diff": -101,
+            "enough_data": false
+          },
+          "deep_minutes": {
+            "true_avg": 37,
+            "true_nights": 1,
+            "false_avg": 67,
+            "false_nights": 20,
+            "diff": -30,
+            "enough_data": false
+          },
+          "efficiency_pct": {
+            "true_avg": 99,
+            "true_nights": 1,
+            "false_avg": 96,
+            "false_nights": 20,
+            "diff": 3,
+            "enough_data": false
+          },
+          "awake_minutes": {
+            "true_avg": 4,
+            "true_nights": 1,
+            "false_avg": 17,
+            "false_nights": 20,
+            "diff": -13,
+            "enough_data": false
+          },
+          "sleep_hr_avg": {
+            "true_avg": 63,
+            "true_nights": 1,
+            "false_avg": 60,
+            "false_nights": 20,
+            "diff": 3,
+            "enough_data": false
+          }
+        },
+        {
+          "condition": "high_day_hr",
+          "excluded_days": 0,
+          "sleep_minutes": {
+            "true_avg": null,
+            "true_nights": 0,
+            "false_avg": 394,
+            "false_nights": 28,
+            "diff": null,
+            "enough_data": false
+          },
+          "deep_minutes": {
+            "true_avg": null,
+            "true_nights": 0,
+            "false_avg": 60,
+            "false_nights": 28,
+            "diff": null,
+            "enough_data": false
+          },
+          "efficiency_pct": {
+            "true_avg": null,
+            "true_nights": 0,
+            "false_avg": 95,
+            "false_nights": 28,
+            "diff": null,
+            "enough_data": false
+          },
+          "awake_minutes": {
+            "true_avg": null,
+            "true_nights": 0,
+            "false_avg": 19,
+            "false_nights": 28,
+            "diff": null,
+            "enough_data": false
+          },
+          "sleep_hr_avg": {
+            "true_avg": null,
+            "true_nights": 0,
+            "false_avg": 61,
+            "false_nights": 28,
+            "diff": null,
+            "enough_data": false
+          }
+        },
+        {
+          "condition": "weekend",
+          "excluded_days": 0,
+          "sleep_minutes": {
+            "true_avg": 471,
+            "true_nights": 8,
+            "false_avg": 363,
+            "false_nights": 20,
+            "diff": 107,
+            "enough_data": true
+          },
+          "deep_minutes": {
+            "true_avg": 67,
+            "true_nights": 8,
+            "false_avg": 57,
+            "false_nights": 20,
+            "diff": 9,
+            "enough_data": true
+          },
+          "efficiency_pct": {
+            "true_avg": 95,
+            "true_nights": 8,
+            "false_avg": 95,
+            "false_nights": 20,
+            "diff": 0,
+            "enough_data": true
+          },
+          "awake_minutes": {
+            "true_avg": 25,
+            "true_nights": 8,
+            "false_avg": 17,
+            "false_nights": 20,
+            "diff": 9,
+            "enough_data": true
+          },
+          "sleep_hr_avg": {
+            "true_avg": 61,
+            "true_nights": 8,
+            "false_avg": 61,
+            "false_nights": 20,
+            "diff": 0,
+            "enough_data": true
+          }
+        }
+      ],
+      "good_bad_nights": {
+        "good": {
+          "nights": 9,
+          "sleep_range": [
+            441,
+            566
+          ],
+          "exercise_day_pct": 56,
+          "late_exercise_pct": 0,
+          "steps_avg": 7841,
+          "prev_sleep_avg": 411,
+          "bedtime_avg": "23:57",
+          "weekend_pct": 67,
+          "enough_data": true
+        },
+        "bad": {
+          "nights": 9,
+          "sleep_range": [
+            178,
+            373
+          ],
+          "exercise_day_pct": 0,
+          "late_exercise_pct": 0,
+          "steps_avg": 3739,
+          "prev_sleep_avg": 357,
+          "bedtime_avg": "01:44",
+          "weekend_pct": 0,
+          "enough_data": true
+        }
+      }
+    },
+    "signals": {
+      "analysis": "signals",
+      "period": {
+        "start": "2026-10-09",
+        "end": "2026-10-22"
+      },
+      "nights": 14,
+      "enough_data": true,
+      "spo2_low_repeat": {
+        "hit": true,
+        "low_nights": 7,
+        "low_records": 8,
+        "low_dates": [
+          "2026-10-13",
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-18",
+          "2026-10-19",
+          "2026-10-21",
+          "2026-10-22"
+        ],
+        "times": [
+          "2026-10-13T03:20:03+09:00",
+          "2026-10-16T04:43:51+09:00",
+          "2026-10-17T03:12:47+09:00",
+          "2026-10-18T04:42:08+09:00",
+          "2026-10-19T03:46:48+09:00"
+        ],
+        "more": 3,
+        "recorded_nights": 14
+      },
+      "sleep_hr_high": {
+        "hit": true,
+        "recent_avg": 65,
+        "recent_nights": 7,
+        "baseline_avg": 60,
+        "baseline_nights": 28,
+        "diff": 5
+      },
+      "short_sleep_streak": {
+        "hit": false,
+        "longest": 1,
+        "dates": [
+          "2026-10-16"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,1047 @@
+{
+  "persona": "synth-02",
+  "user_id": "05db1791-835c-4aca-81db-476ee8dc00a4",
+  "now": "2026-10-22T21:00:00+09:00",
+  "linked_from": "2026-09-18",
+  "steps": [
+    {
+      "date": "2026-09-18",
+      "steps": 4277
+    },
+    {
+      "date": "2026-09-19",
+      "steps": 5420
+    },
+    {
+      "date": "2026-09-20",
+      "steps": 5569
+    },
+    {
+      "date": "2026-09-21",
+      "steps": 5452
+    },
+    {
+      "date": "2026-09-22",
+      "steps": 4657
+    },
+    {
+      "date": "2026-09-23",
+      "steps": 4581
+    },
+    {
+      "date": "2026-09-24",
+      "steps": 5830
+    },
+    {
+      "date": "2026-09-25",
+      "steps": 5273
+    },
+    {
+      "date": "2026-09-26",
+      "steps": 5598
+    },
+    {
+      "date": "2026-09-27",
+      "steps": 4112
+    },
+    {
+      "date": "2026-09-28",
+      "steps": 5934
+    },
+    {
+      "date": "2026-09-29",
+      "steps": 5585
+    },
+    {
+      "date": "2026-09-30",
+      "steps": 6825
+    },
+    {
+      "date": "2026-10-01",
+      "steps": 5631
+    },
+    {
+      "date": "2026-10-02",
+      "steps": 5037
+    },
+    {
+      "date": "2026-10-03",
+      "steps": 5367
+    },
+    {
+      "date": "2026-10-04",
+      "steps": 5596
+    },
+    {
+      "date": "2026-10-05",
+      "steps": 6964
+    },
+    {
+      "date": "2026-10-06",
+      "steps": 4256
+    },
+    {
+      "date": "2026-10-07",
+      "steps": 5638
+    },
+    {
+      "date": "2026-10-08",
+      "steps": 4031
+    },
+    {
+      "date": "2026-10-09",
+      "steps": 5168
+    },
+    {
+      "date": "2026-10-10",
+      "steps": 5248
+    },
+    {
+      "date": "2026-10-11",
+      "steps": 5856
+    },
+    {
+      "date": "2026-10-12",
+      "steps": 4877
+    },
+    {
+      "date": "2026-10-13",
+      "steps": 5321
+    },
+    {
+      "date": "2026-10-14",
+      "steps": 4738
+    },
+    {
+      "date": "2026-10-15",
+      "steps": 5044
+    },
+    {
+      "date": "2026-10-16",
+      "steps": 5034
+    },
+    {
+      "date": "2026-10-17",
+      "steps": 5971
+    },
+    {
+      "date": "2026-10-18",
+      "steps": 4588
+    },
+    {
+      "date": "2026-10-19",
+      "steps": 6377
+    },
+    {
+      "date": "2026-10-20",
+      "steps": 5089
+    },
+    {
+      "date": "2026-10-21",
+      "steps": 6135
+    },
+    {
+      "date": "2026-10-22",
+      "steps": 4951
+    }
+  ],
+  "heart": [
+    {
+      "date": "2026-09-18",
+      "hr_avg": 73.0,
+      "hr_min": 52,
+      "hr_max": 92,
+      "hours": 24
+    },
+    {
+      "date": "2026-09-19",
+      "hr_avg": 72.3,
+      "hr_min": 51,
+      "hr_max": 98,
+      "hours": 24
+    },
+    {
+      "date": "2026-09-20",
+      "hr_avg": 70.7,
+      "hr_min": 53,
+      "hr_max": 85,
+      "hours": 24
+    },
+    {
+      "date": "2026-09-21",
+      "hr_avg": 71.5,
+      "hr_min": 50,
+      "hr_max": 90,
+      "hours": 24
+    },
+    {
+      "date": "2026-09-22",
+      "hr_avg": 73.6,
+      "hr_min": 54,
+      "hr_max": 133,
+      "hours": 24
+    },
+    {
+      "date": "2026-09-23",
+      "hr_avg": 71.6,
+      "hr_min": 53,
+      "hr_max": 91,
+      "hours": 24
+    },
+    {
+      "date": "2026-09-24",
+      "hr_avg": 75.7,
+      "hr_min": 54,
+      "hr_max": 131,
+      "hours": 24
+    },
+    {
+      "date": "2026-09-25",
+      "hr_avg": 71.9,
+      "hr_min": 52,
+      "hr_max": 93,
+      "hours": 24
+    },
+    {
+      "date": "2026-09-26",
+      "hr_avg": 70.4,
+      "hr_min": 50,
+      "hr_max": 91,
+      "hours": 24
+    },
+    {
+      "date": "2026-09-27",
+      "hr_avg": 69.2,
+      "hr_min": 49,
+      "hr_max": 93,
+      "hours": 24
+    },
+    {
+      "date": "2026-09-28",
+      "hr_avg": 73.9,
+      "hr_min": 52,
+      "hr_max": 90,
+      "hours": 24
+    },
+    {
+      "date": "2026-09-29",
+      "hr_avg": 76.8,
+      "hr_min": 48,
+      "hr_max": 131,
+      "hours": 24
+    },
+    {
+      "date": "2026-09-30",
+      "hr_avg": 72.3,
+      "hr_min": 50,
+      "hr_max": 93,
+      "hours": 24
+    },
+    {
+      "date": "2026-10-01",
+      "hr_avg": 72.4,
+      "hr_min": 52,
+      "hr_max": 90,
+      "hours": 24
+    },
+    {
+      "date": "2026-10-02",
+      "hr_avg": 73.5,
+      "hr_min": 55,
+      "hr_max": 90,
+      "hours": 24
+    },
+    {
+      "date": "2026-10-03",
+      "hr_avg": 74.1,
+      "hr_min": 56,
+      "hr_max": 94,
+      "hours": 24
+    },
+    {
+      "date": "2026-10-04",
+      "hr_avg": 71.6,
+      "hr_min": 53,
+      "hr_max": 91,
+      "hours": 24
+    },
+    {
+      "date": "2026-10-05",
+      "hr_avg": 73.0,
+      "hr_min": 50,
+      "hr_max": 93,
+      "hours": 24
+    },
+    {
+      "date": "2026-10-06",
+      "hr_avg": 74.6,
+      "hr_min": 51,
+      "hr_max": 131,
+      "hours": 24
+    },
+    {
+      "date": "2026-10-07",
+      "hr_avg": 71.5,
+      "hr_min": 50,
+      "hr_max": 87,
+      "hours": 23
+    },
+    {
+      "date": "2026-10-08",
+      "hr_avg": 75.7,
+      "hr_min": 53,
+      "hr_max": 131,
+      "hours": 24
+    },
+    {
+      "date": "2026-10-09",
+      "hr_avg": 72.3,
+      "hr_min": 50,
+      "hr_max": 89,
+      "hours": 24
+    },
+    {
+      "date": "2026-10-10",
+      "hr_avg": 72.3,
+      "hr_min": 53,
+      "hr_max": 94,
+      "hours": 24
+    },
+    {
+      "date": "2026-10-11",
+      "hr_avg": 71.6,
+      "hr_min": 52,
+      "hr_max": 90,
+      "hours": 24
+    },
+    {
+      "date": "2026-10-12",
+      "hr_avg": 72.0,
+      "hr_min": 54,
+      "hr_max": 91,
+      "hours": 24
+    },
+    {
+      "date": "2026-10-13",
+      "hr_avg": 74.4,
+      "hr_min": 53,
+      "hr_max": 132,
+      "hours": 24
+    },
+    {
+      "date": "2026-10-14",
+      "hr_avg": 71.9,
+      "hr_min": 53,
+      "hr_max": 91,
+      "hours": 23
+    },
+    {
+      "date": "2026-10-15",
+      "hr_avg": 75.0,
+      "hr_min": 52,
+      "hr_max": 137,
+      "hours": 24
+    },
+    {
+      "date": "2026-10-16",
+      "hr_avg": 72.0,
+      "hr_min": 51,
+      "hr_max": 88,
+      "hours": 24
+    },
+    {
+      "date": "2026-10-17",
+      "hr_avg": 70.0,
+      "hr_min": 50,
+      "hr_max": 90,
+      "hours": 24
+    },
+    {
+      "date": "2026-10-18",
+      "hr_avg": 70.6,
+      "hr_min": 54,
+      "hr_max": 97,
+      "hours": 24
+    },
+    {
+      "date": "2026-10-19",
+      "hr_avg": 72.1,
+      "hr_min": 51,
+      "hr_max": 85,
+      "hours": 24
+    },
+    {
+      "date": "2026-10-20",
+      "hr_avg": 75.1,
+      "hr_min": 52,
+      "hr_max": 131,
+      "hours": 24
+    },
+    {
+      "date": "2026-10-21",
+      "hr_avg": 71.3,
+      "hr_min": 51,
+      "hr_max": 91,
+      "hours": 24
+    },
+    {
+      "date": "2026-10-22",
+      "hr_avg": 75.3,
+      "hr_min": 53,
+      "hr_max": 134,
+      "hours": 21
+    }
+  ],
+  "sleep": [
+    {
+      "date": "2026-09-19",
+      "start_at": "2026-09-19T00:32:09+09:00",
+      "end_at": "2026-09-19T08:45:09+09:00",
+      "is_main": true,
+      "sleep_minutes": 443,
+      "deep_minutes": 69,
+      "rem_minutes": 111,
+      "light_minutes": 263,
+      "awake_minutes": 50,
+      "spo2_avg": 95.8,
+      "spo2_min": 94.4,
+      "spo2_max": 97.2
+    },
+    {
+      "date": "2026-09-20",
+      "start_at": "2026-09-20T00:04:28+09:00",
+      "end_at": "2026-09-20T08:01:28+09:00",
+      "is_main": true,
+      "sleep_minutes": 460,
+      "deep_minutes": 73,
+      "rem_minutes": 121,
+      "light_minutes": 266,
+      "awake_minutes": 17,
+      "spo2_avg": 96.2,
+      "spo2_min": 95.1,
+      "spo2_max": 97.0
+    },
+    {
+      "date": "2026-09-21",
+      "start_at": "2026-09-20T23:23:49+09:00",
+      "end_at": "2026-09-21T06:35:49+09:00",
+      "is_main": true,
+      "sleep_minutes": 426,
+      "deep_minutes": 74,
+      "rem_minutes": 112,
+      "light_minutes": 240,
+      "awake_minutes": 6,
+      "spo2_avg": 96.7,
+      "spo2_min": 96.5,
+      "spo2_max": 97.0
+    },
+    {
+      "date": "2026-09-22",
+      "start_at": "2026-09-21T23:37:21+09:00",
+      "end_at": "2026-09-22T06:56:21+09:00",
+      "is_main": true,
+      "sleep_minutes": 410,
+      "deep_minutes": 50,
+      "rem_minutes": 123,
+      "light_minutes": 237,
+      "awake_minutes": 29,
+      "spo2_avg": 95.3,
+      "spo2_min": 91.7,
+      "spo2_max": 97.6
+    },
+    {
+      "date": "2026-09-23",
+      "start_at": "2026-09-22T23:33:55+09:00",
+      "end_at": "2026-09-23T06:40:55+09:00",
+      "is_main": true,
+      "sleep_minutes": 406,
+      "deep_minutes": 46,
+      "rem_minutes": 125,
+      "light_minutes": 235,
+      "awake_minutes": 21,
+      "spo2_avg": 97.2,
+      "spo2_min": 96.6,
+      "spo2_max": 97.6
+    },
+    {
+      "date": "2026-09-24",
+      "start_at": "2026-09-24T00:01:48+09:00",
+      "end_at": "2026-09-24T06:38:48+09:00",
+      "is_main": true,
+      "sleep_minutes": 382,
+      "deep_minutes": 46,
+      "rem_minutes": 96,
+      "light_minutes": 240,
+      "awake_minutes": 15,
+      "spo2_avg": 95.2,
+      "spo2_min": 94.3,
+      "spo2_max": 96.2
+    },
+    {
+      "date": "2026-09-25",
+      "start_at": "2026-09-24T23:17:35+09:00",
+      "end_at": "2026-09-25T05:19:35+09:00",
+      "is_main": true,
+      "sleep_minutes": 340,
+      "deep_minutes": 63,
+      "rem_minutes": 58,
+      "light_minutes": 219,
+      "awake_minutes": 22,
+      "spo2_avg": 96.5,
+      "spo2_min": 95.0,
+      "spo2_max": 98.6
+    },
+    {
+      "date": "2026-09-26",
+      "start_at": "2026-09-26T00:04:29+09:00",
+      "end_at": "2026-09-26T08:02:29+09:00",
+      "is_main": true,
+      "sleep_minutes": 460,
+      "deep_minutes": 50,
+      "rem_minutes": 125,
+      "light_minutes": 285,
+      "awake_minutes": 18,
+      "spo2_avg": 96.1,
+      "spo2_min": 94.2,
+      "spo2_max": 97.2
+    },
+    {
+      "date": "2026-09-27",
+      "start_at": "2026-09-27T00:35:09+09:00",
+      "end_at": "2026-09-27T08:02:09+09:00",
+      "is_main": true,
+      "sleep_minutes": 436,
+      "deep_minutes": 56,
+      "rem_minutes": 119,
+      "light_minutes": 261,
+      "awake_minutes": 11,
+      "spo2_avg": 95.9,
+      "spo2_min": 95.2,
+      "spo2_max": 96.5
+    },
+    {
+      "date": "2026-09-28",
+      "start_at": "2026-09-27T22:54:44+09:00",
+      "end_at": "2026-09-28T04:51:44+09:00",
+      "is_main": true,
+      "sleep_minutes": 353,
+      "deep_minutes": 50,
+      "rem_minutes": 97,
+      "light_minutes": 206,
+      "awake_minutes": 4,
+      "spo2_avg": 97.2,
+      "spo2_min": 97.1,
+      "spo2_max": 97.3
+    },
+    {
+      "date": "2026-09-29",
+      "start_at": "2026-09-28T23:03:20+09:00",
+      "end_at": "2026-09-29T05:55:20+09:00",
+      "is_main": true,
+      "sleep_minutes": 397,
+      "deep_minutes": 62,
+      "rem_minutes": 83,
+      "light_minutes": 252,
+      "awake_minutes": 15,
+      "spo2_avg": 95.7,
+      "spo2_min": 94.0,
+      "spo2_max": 97.3
+    },
+    {
+      "date": "2026-09-30",
+      "start_at": "2026-09-29T23:46:50+09:00",
+      "end_at": "2026-09-30T06:36:50+09:00",
+      "is_main": true,
+      "sleep_minutes": 384,
+      "deep_minutes": 63,
+      "rem_minutes": 92,
+      "light_minutes": 229,
+      "awake_minutes": 26,
+      "spo2_avg": 95.8,
+      "spo2_min": 93.9,
+      "spo2_max": 98.4
+    },
+    {
+      "date": "2026-10-01",
+      "start_at": "2026-09-30T23:16:52+09:00",
+      "end_at": "2026-10-01T06:20:52+09:00",
+      "is_main": true,
+      "sleep_minutes": 420,
+      "deep_minutes": 62,
+      "rem_minutes": 101,
+      "light_minutes": 257,
+      "awake_minutes": 4,
+      "spo2_avg": 95.5,
+      "spo2_min": 94.4,
+      "spo2_max": 96.5
+    },
+    {
+      "date": "2026-10-02",
+      "start_at": "2026-10-01T23:13:19+09:00",
+      "end_at": "2026-10-02T05:48:19+09:00",
+      "is_main": true,
+      "sleep_minutes": 383,
+      "deep_minutes": 45,
+      "rem_minutes": 95,
+      "light_minutes": 243,
+      "awake_minutes": 12,
+      "spo2_avg": 95.6,
+      "spo2_min": 95.3,
+      "spo2_max": 96.3
+    },
+    {
+      "date": "2026-10-03",
+      "start_at": "2026-10-03T00:33:36+09:00",
+      "end_at": "2026-10-03T08:04:36+09:00",
+      "is_main": true,
+      "sleep_minutes": 442,
+      "deep_minutes": 74,
+      "rem_minutes": 104,
+      "light_minutes": 264,
+      "awake_minutes": 9,
+      "spo2_avg": 96.0,
+      "spo2_min": 94.6,
+      "spo2_max": 97.1
+    },
+    {
+      "date": "2026-10-04",
+      "start_at": "2026-10-04T00:09:03+09:00",
+      "end_at": "2026-10-04T07:55:03+09:00",
+      "is_main": true,
+      "sleep_minutes": 457,
+      "deep_minutes": 70,
+      "rem_minutes": 119,
+      "light_minutes": 268,
+      "awake_minutes": 9,
+      "spo2_avg": 97.1,
+      "spo2_min": 96.1,
+      "spo2_max": 98.1
+    },
+    {
+      "date": "2026-10-05",
+      "start_at": "2026-10-04T22:58:43+09:00",
+      "end_at": "2026-10-05T05:18:43+09:00",
+      "is_main": true,
+      "sleep_minutes": 360,
+      "deep_minutes": 64,
+      "rem_minutes": 84,
+      "light_minutes": 212,
+      "awake_minutes": 20,
+      "spo2_avg": 96.7,
+      "spo2_min": 96.3,
+      "spo2_max": 97.0
+    },
+    {
+      "date": "2026-10-06",
+      "start_at": "2026-10-05T23:59:34+09:00",
+      "end_at": "2026-10-06T06:36:34+09:00",
+      "is_main": true,
+      "sleep_minutes": 379,
+      "deep_minutes": 54,
+      "rem_minutes": 90,
+      "light_minutes": 235,
+      "awake_minutes": 18,
+      "spo2_avg": 96.3,
+      "spo2_min": 95.2,
+      "spo2_max": 97.8
+    },
+    {
+      "date": "2026-10-07",
+      "start_at": "2026-10-06T23:17:27+09:00",
+      "end_at": "2026-10-07T06:07:27+09:00",
+      "is_main": true,
+      "sleep_minutes": 398,
+      "deep_minutes": 54,
+      "rem_minutes": 108,
+      "light_minutes": 236,
+      "awake_minutes": 12,
+      "spo2_avg": 95.9,
+      "spo2_min": 95.2,
+      "spo2_max": 97.8
+    },
+    {
+      "date": "2026-10-08",
+      "start_at": "2026-10-07T23:55:11+09:00",
+      "end_at": "2026-10-08T06:36:11+09:00",
+      "is_main": true,
+      "sleep_minutes": 359,
+      "deep_minutes": 62,
+      "rem_minutes": 88,
+      "light_minutes": 209,
+      "awake_minutes": 42,
+      "spo2_avg": 96.0,
+      "spo2_min": 93.9,
+      "spo2_max": 99.3
+    },
+    {
+      "date": "2026-10-09",
+      "start_at": "2026-10-08T22:56:04+09:00",
+      "end_at": "2026-10-09T05:14:04+09:00",
+      "is_main": true,
+      "sleep_minutes": 370,
+      "deep_minutes": 55,
+      "rem_minutes": 82,
+      "light_minutes": 233,
+      "awake_minutes": 8,
+      "spo2_avg": 96.5,
+      "spo2_min": 94.7,
+      "spo2_max": 99.0
+    },
+    {
+      "date": "2026-10-10",
+      "start_at": "2026-10-10T00:05:13+09:00",
+      "end_at": "2026-10-10T07:54:13+09:00",
+      "is_main": true,
+      "sleep_minutes": 444,
+      "deep_minutes": 52,
+      "rem_minutes": 109,
+      "light_minutes": 283,
+      "awake_minutes": 25,
+      "spo2_avg": 96.4,
+      "spo2_min": 96.0,
+      "spo2_max": 97.0
+    },
+    {
+      "date": "2026-10-11",
+      "start_at": "2026-10-11T00:53:25+09:00",
+      "end_at": "2026-10-11T08:38:25+09:00",
+      "is_main": true,
+      "sleep_minutes": 437,
+      "deep_minutes": 56,
+      "rem_minutes": 134,
+      "light_minutes": 247,
+      "awake_minutes": 28,
+      "spo2_avg": 97.0,
+      "spo2_min": 96.0,
+      "spo2_max": 98.5
+    },
+    {
+      "date": "2026-10-12",
+      "start_at": "2026-10-11T23:29:15+09:00",
+      "end_at": "2026-10-12T06:05:15+09:00",
+      "is_main": true,
+      "sleep_minutes": 373,
+      "deep_minutes": 47,
+      "rem_minutes": 104,
+      "light_minutes": 222,
+      "awake_minutes": 23,
+      "spo2_avg": 96.1,
+      "spo2_min": 94.6,
+      "spo2_max": 97.1
+    },
+    {
+      "date": "2026-10-13",
+      "start_at": "2026-10-12T23:22:02+09:00",
+      "end_at": "2026-10-13T07:09:02+09:00",
+      "is_main": true,
+      "sleep_minutes": 437,
+      "deep_minutes": 56,
+      "rem_minutes": 124,
+      "light_minutes": 257,
+      "awake_minutes": 30,
+      "spo2_avg": 96.0,
+      "spo2_min": 95.0,
+      "spo2_max": 97.6
+    },
+    {
+      "date": "2026-10-14",
+      "start_at": "2026-10-13T23:24:09+09:00",
+      "end_at": "2026-10-14T06:50:09+09:00",
+      "is_main": true,
+      "sleep_minutes": 440,
+      "deep_minutes": 68,
+      "rem_minutes": 130,
+      "light_minutes": 242,
+      "awake_minutes": 6,
+      "spo2_avg": 95.3,
+      "spo2_min": 94.4,
+      "spo2_max": 95.9
+    },
+    {
+      "date": "2026-10-15",
+      "start_at": "2026-10-14T23:25:21+09:00",
+      "end_at": "2026-10-15T06:39:21+09:00",
+      "is_main": true,
+      "sleep_minutes": 399,
+      "deep_minutes": 47,
+      "rem_minutes": 113,
+      "light_minutes": 239,
+      "awake_minutes": 35,
+      "spo2_avg": 96.9,
+      "spo2_min": 95.4,
+      "spo2_max": 98.4
+    },
+    {
+      "date": "2026-10-16",
+      "start_at": "2026-10-15T23:47:30+09:00",
+      "end_at": "2026-10-16T06:13:30+09:00",
+      "is_main": true,
+      "sleep_minutes": 375,
+      "deep_minutes": 47,
+      "rem_minutes": 104,
+      "light_minutes": 224,
+      "awake_minutes": 11,
+      "spo2_avg": 96.1,
+      "spo2_min": 95.1,
+      "spo2_max": 96.8
+    },
+    {
+      "date": "2026-10-17",
+      "start_at": "2026-10-17T00:35:23+09:00",
+      "end_at": "2026-10-17T08:15:23+09:00",
+      "is_main": true,
+      "sleep_minutes": 439,
+      "deep_minutes": 65,
+      "rem_minutes": 123,
+      "light_minutes": 251,
+      "awake_minutes": 21,
+      "spo2_avg": 95.8,
+      "spo2_min": 95.3,
+      "spo2_max": 96.2
+    },
+    {
+      "date": "2026-10-18",
+      "start_at": "2026-10-18T00:23:45+09:00",
+      "end_at": "2026-10-18T08:07:45+09:00",
+      "is_main": true,
+      "sleep_minutes": 452,
+      "deep_minutes": 67,
+      "rem_minutes": 110,
+      "light_minutes": 275,
+      "awake_minutes": 12,
+      "spo2_avg": 95.2,
+      "spo2_min": 93.2,
+      "spo2_max": 97.2
+    },
+    {
+      "date": "2026-10-19",
+      "start_at": "2026-10-18T23:59:23+09:00",
+      "end_at": "2026-10-19T06:07:23+09:00",
+      "is_main": true,
+      "sleep_minutes": 352,
+      "deep_minutes": 51,
+      "rem_minutes": 86,
+      "light_minutes": 215,
+      "awake_minutes": 16,
+      "spo2_avg": 96.3,
+      "spo2_min": 95.6,
+      "spo2_max": 96.9
+    },
+    {
+      "date": "2026-10-20",
+      "start_at": "2026-10-19T23:18:31+09:00",
+      "end_at": "2026-10-20T06:17:31+09:00",
+      "is_main": true,
+      "sleep_minutes": 415,
+      "deep_minutes": 56,
+      "rem_minutes": 106,
+      "light_minutes": 253,
+      "awake_minutes": 4,
+      "spo2_avg": 95.6,
+      "spo2_min": 95.1,
+      "spo2_max": 96.1
+    },
+    {
+      "date": "2026-10-21",
+      "start_at": "2026-10-20T23:28:12+09:00",
+      "end_at": "2026-10-21T06:44:12+09:00",
+      "is_main": true,
+      "sleep_minutes": 431,
+      "deep_minutes": 69,
+      "rem_minutes": 118,
+      "light_minutes": 244,
+      "awake_minutes": 5,
+      "spo2_avg": 96.3,
+      "spo2_min": 94.5,
+      "spo2_max": 99.5
+    },
+    {
+      "date": "2026-10-22",
+      "start_at": "2026-10-21T23:10:28+09:00",
+      "end_at": "2026-10-22T05:51:28+09:00",
+      "is_main": true,
+      "sleep_minutes": 394,
+      "deep_minutes": 60,
+      "rem_minutes": 96,
+      "light_minutes": 238,
+      "awake_minutes": 7,
+      "spo2_avg": 96.5,
+      "spo2_min": 95.5,
+      "spo2_max": 97.5
+    }
+  ],
+  "exercise": [
+    {
+      "date": "2026-09-22",
+      "start_at": "2026-09-22T20:03:00+09:00",
+      "end_at": "2026-09-22T21:00:00+09:00",
+      "duration_minutes": 57,
+      "exercise_type": 70,
+      "type_name": "근력 운동",
+      "category": "strength",
+      "counts_as_exercise": true,
+      "title": null,
+      "calories_kcal": 350.4,
+      "distance_m": null,
+      "avg_heart_rate": 116.7,
+      "max_heart_rate": 133,
+      "avg_speed_mps": null
+    },
+    {
+      "date": "2026-09-24",
+      "start_at": "2026-09-24T19:06:00+09:00",
+      "end_at": "2026-09-24T20:12:00+09:00",
+      "duration_minutes": 66,
+      "exercise_type": 70,
+      "type_name": "근력 운동",
+      "category": "strength",
+      "counts_as_exercise": true,
+      "title": null,
+      "calories_kcal": 399.0,
+      "distance_m": null,
+      "avg_heart_rate": 116.6,
+      "max_heart_rate": 131,
+      "avg_speed_mps": null
+    },
+    {
+      "date": "2026-09-29",
+      "start_at": "2026-09-29T19:04:00+09:00",
+      "end_at": "2026-09-29T20:04:00+09:00",
+      "duration_minutes": 60,
+      "exercise_type": 70,
+      "type_name": "근력 운동",
+      "category": "strength",
+      "counts_as_exercise": true,
+      "title": null,
+      "calories_kcal": 418.8,
+      "distance_m": null,
+      "avg_heart_rate": 116.7,
+      "max_heart_rate": 131,
+      "avg_speed_mps": null
+    },
+    {
+      "date": "2026-10-06",
+      "start_at": "2026-10-06T19:15:00+09:00",
+      "end_at": "2026-10-06T20:16:00+09:00",
+      "duration_minutes": 61,
+      "exercise_type": 70,
+      "type_name": "근력 운동",
+      "category": "strength",
+      "counts_as_exercise": true,
+      "title": null,
+      "calories_kcal": 404.9,
+      "distance_m": null,
+      "avg_heart_rate": 116.9,
+      "max_heart_rate": 131,
+      "avg_speed_mps": null
+    },
+    {
+      "date": "2026-10-08",
+      "start_at": "2026-10-08T19:14:00+09:00",
+      "end_at": "2026-10-08T20:16:00+09:00",
+      "duration_minutes": 62,
+      "exercise_type": 70,
+      "type_name": "근력 운동",
+      "category": "strength",
+      "counts_as_exercise": true,
+      "title": null,
+      "calories_kcal": 386.8,
+      "distance_m": null,
+      "avg_heart_rate": 116.3,
+      "max_heart_rate": 131,
+      "avg_speed_mps": null
+    },
+    {
+      "date": "2026-10-13",
+      "start_at": "2026-10-13T19:51:00+09:00",
+      "end_at": "2026-10-13T20:57:00+09:00",
+      "duration_minutes": 66,
+      "exercise_type": 70,
+      "type_name": "근력 운동",
+      "category": "strength",
+      "counts_as_exercise": true,
+      "title": null,
+      "calories_kcal": 399.5,
+      "distance_m": null,
+      "avg_heart_rate": 116.6,
+      "max_heart_rate": 132,
+      "avg_speed_mps": null
+    },
+    {
+      "date": "2026-10-15",
+      "start_at": "2026-10-15T19:40:00+09:00",
+      "end_at": "2026-10-15T20:39:00+09:00",
+      "duration_minutes": 59,
+      "exercise_type": 70,
+      "type_name": "근력 운동",
+      "category": "strength",
+      "counts_as_exercise": true,
+      "title": null,
+      "calories_kcal": 370.5,
+      "distance_m": null,
+      "avg_heart_rate": 116.6,
+      "max_heart_rate": 137,
+      "avg_speed_mps": null
+    },
+    {
+      "date": "2026-10-20",
+      "start_at": "2026-10-20T19:45:00+09:00",
+      "end_at": "2026-10-20T20:53:00+09:00",
+      "duration_minutes": 68,
+      "exercise_type": 70,
+      "type_name": "근력 운동",
+      "category": "strength",
+      "counts_as_exercise": true,
+      "title": null,
+      "calories_kcal": 443.8,
+      "distance_m": null,
+      "avg_heart_rate": 116.5,
+      "max_heart_rate": 131,
+      "avg_speed_mps": null
+    },
+    {
+      "date": "2026-10-22",
+      "start_at": "2026-10-22T19:41:00+09:00",
+      "end_at": "2026-10-22T20:40:00+09:00",
+      "duration_minutes": 59,
+      "exercise_type": 70,
+      "type_name": "근력 운동",
+      "category": "strength",
+      "counts_as_exercise": true,
+      "title": null,
+      "calories_kcal": 367.1,
+      "distance_m": null,
+      "avg_heart_rate": 116.7,
+      "max_heart_rate": 134,
+      "avg_speed_mps": null
+    }
+  ],
+  "sync": {
+    "steps": {
+      "last_data_at": "2026-10-22T20:39:07+09:00",
+      "last_status": "success",
+      "last_success_at": "2026-10-22T21:00:00+09:00"
+    },
+    "heart_rates": {
+      "last_data_at": "2026-10-22T20:40:00+09:00",
+      "last_status": "success",
+      "last_success_at": "2026-10-22T21:00:00+09:00"
+    },
+    "oxygen_saturations": {
+      "last_data_at": "2026-10-22T04:44:18+09:00",
+      "last_status": "success",
+      "last_success_at": "2026-10-22T21:00:00+09:00"
+    },
+    "sleeps": {
+      "last_data_at": "2026-10-22T05:51:28+09:00",
+      "last_status": "success",
+      "last_success_at": "2026-10-22T21:00:00+09:00"
+    },
+    "exercise_sessions": {
+      "last_data_at": "2026-10-22T20:40:00+09:00",
+      "last_status": "success",
+      "last_success_at": "2026-10-22T21:00:00+09:00"
+    }
+  },
+  "data_sha256": "a18351cc1e5833da91f45b066b82e9532e24db83d711ece50eb119fce3ef9c66"
+}

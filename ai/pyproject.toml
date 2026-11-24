@@ -1,0 +1,46 @@
+[project]
+name = "coach-ai"
+version = "0.1.0"
+description = "사각 AI 건강코칭 - LangGraph 코칭 에이전트와 건강데이터 조회 게이트웨이"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "httpx>=0.27",
+    "pydantic>=2.7",
+    "pydantic-settings>=2.3",
+    "langgraph>=1.0",
+    "langchain-core>=1.0",
+    "langchain-openai>=1.0",
+    "tzdata>=2026.5",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "pytest-asyncio>=0.24",
+    "respx>=0.21",
+    "ruff>=0.6",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/coach_ai"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+addopts = "-m 'not llm'"
+markers = [
+    "llm: 실제 사내 LLM을 호출하는 테스트",
+    "security: 접근 권한 테스트 세트",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

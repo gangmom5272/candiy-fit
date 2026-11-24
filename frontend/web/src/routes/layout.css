@@ -1,0 +1,347 @@
+@import 'tailwindcss';
+
+@font-face {
+	font-family: 'Paperlogy';
+	src: url('../lib/assets/fonts/Paperlogy-1Thin.woff2') format('woff2');
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Paperlogy';
+	src: url('../lib/assets/fonts/Paperlogy-2ExtraLight.woff2') format('woff2');
+	font-weight: 200;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Paperlogy';
+	src: url('../lib/assets/fonts/Paperlogy-3Light.woff2') format('woff2');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Paperlogy';
+	src: url('../lib/assets/fonts/Paperlogy-4Regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Paperlogy';
+	src: url('../lib/assets/fonts/Paperlogy-5Medium.woff2') format('woff2');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Paperlogy';
+	src: url('../lib/assets/fonts/Paperlogy-6SemiBold.woff2') format('woff2');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Paperlogy';
+	src: url('../lib/assets/fonts/Paperlogy-7Bold.woff2') format('woff2');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Paperlogy';
+	src: url('../lib/assets/fonts/Paperlogy-8ExtraBold.woff2') format('woff2');
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Paperlogy';
+	src: url('../lib/assets/fonts/Paperlogy-9Black.woff2') format('woff2');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@theme static {
+	--container-health-page: 84rem;
+	--font-sans: 'Paperlogy', sans-serif;
+
+	/*
+	 * primary 는 shadcn 의 뜻 그대로 "글자가 올라가는 주요 면"이다(S15P31A403-358). 버튼·Toast·선택 날짜의 배경과 작은 빨간 글자에 쓴다.
+	 * 그 위 글자는 primary-foreground. 밝은 글자와 대비 4.76:1, hover 5.67:1,
+	 * 글자색으로는 흰 카드 4.95·연분홍 4.64·surface 4.61:1(#315 에서 #CF3A40 → #CC383E, 연분홍 위 4.50 미달 보정).
+	 * 장식·아이콘·테두리·차트 선·큰 글자의 메인 레드(#F85A5A, 3:1 안팎)는 아래 brand 다. 예전에는 그 색이 primary 였고 이 색은 primary-strong 이었다
+	 */
+	--color-primary: #cc383e;
+	--color-primary-hover: #b83137;
+	--color-primary-foreground: #fcf9f6;
+	/* 메인 레드(brand)의 밝은 단계. 이름은 예전 그대로 둔다 */
+	--color-primary-light: #ff8f8f;
+	--color-primary-soft: #fff4f3;
+
+	--color-coral-main: #eda18b;
+	--color-coral-sub: #f5c7bc;
+	--color-coral-soft: #f9e0dd;
+
+	--color-background: #fafafb;
+	--color-card: #fefefe;
+	--color-surface: #f3f6fb;
+	--color-border: #e8edf5;
+
+	--color-text-primary: #2c2e35;
+	--color-text-secondary: #6d7280;
+	--color-text-disabled: #a7acb8;
+
+	--color-success: #6bb48a;
+	--color-success-soft: #f9fcf8;
+	--color-warning: #e0a447;
+	--color-warning-soft: #fffbf4;
+	--color-info: #6d8edb;
+	--color-info-soft: #f7faff;
+	--color-danger: #c94f57;
+	--color-danger-soft: #fcebec;
+
+	--color-success-badge: #e9f6eb;
+	--color-warning-badge: #fff2d7;
+	--color-info-badge: #eaf0ff;
+
+	/*
+	 * shadcn/ui 테마 이름(S15P31A403-339, docs/design-system.md "시맨틱 토큰 위계").
+	 * 프론트엔드에서 널리 쓰는 약속된 이름으로 같은 색을 부를 수 있게 한다. 면은 이름 그대로, 그 위 글자는 -foreground 를 붙인다
+	 * (bg-muted text-muted-foreground). 값을 새로 만들지 않고 위 토큰을 참조하므로 색은 한 곳에서만 바뀐다.
+	 * 새 코드는 이 이름을 쓴다. 위의 예전 이름은 화면을 옮길 때까지 유지한다.
+	 * primary·primary-foreground 는 위에서 값을 직접 가진다(주요 면과 그 위 글자).
+	 * brand·ring 은 primary 를 참조하지 않는다. 장식과 포커스 테두리는 메인 레드, 주요 면은 진한 레드로 서로 다른 색이다.
+	 */
+	--color-foreground: var(--color-text-primary);
+	--color-card-foreground: var(--color-text-primary);
+	--color-popover: var(--color-card);
+	--color-popover-foreground: var(--color-text-primary);
+	--color-secondary: var(--color-surface);
+	--color-secondary-foreground: var(--color-text-primary);
+	--color-muted: var(--color-surface);
+	--color-muted-foreground: var(--color-text-secondary);
+	--color-accent: var(--color-primary-soft);
+	--color-accent-foreground: var(--color-primary);
+	--color-destructive: var(--color-danger);
+	--color-input: var(--color-border);
+	--color-ring: var(--color-brand);
+	/* shadcn 기본 이름에 없는 프로젝트 확장. 장식·아이콘·테두리·차트 선·큰 글자에 쓰는 메인 레드. 값을 직접 가진다 */
+	--color-brand: #f85a5a;
+}
+
+/*
+ * 역할별 글자 기준(S15P31A403-309, docs/design-system.md "Typography 역할").
+ * 숫자 대신 역할 이름으로 쓴다. 줄간격은 소수 px 높이로 경계가 흔들리지 않게 정수 px 로 둔다. 크기·굵기·줄간격을 함께 정하므로 같은 요소에 text-[..]·font-*·leading-* 를 겹쳐 쓰지 않는다.
+ * 홈 대표 점수처럼 화면 폭에 맞춰 커지는 강조 영역은 문서의 예외 목록을 따른다.
+ */
+@utility text-page-title {
+	/* 페이지 제목: 한 화면에 하나, 모든 화면 폭에서 같은 크기(#284 건강 데이터 30px 기준) */
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 39px;
+}
+
+@utility text-section-title {
+	/* 섹션 제목: 페이지 안의 큰 묶음(차트·타임라인·안내 영역 등). 넓은 화면(lg)에서 한 단계 키운다 */
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 28px;
+	@media (width >= 64rem) {
+		font-size: 24px;
+		line-height: 32px;
+	}
+}
+
+@utility text-card-title {
+	/* 일반 카드 제목: 카드 안의 이름표 */
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 22px;
+}
+
+@utility text-card-title-lg {
+	/* 큰 차트 카드·강조 카드 제목 */
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 26px;
+}
+
+@utility text-metric {
+	/* 핵심 수치: 카드의 평균·합계·측정값 */
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 35px;
+}
+
+@utility text-metric-sm {
+	/* 보조 수치: 핵심 수치 아래 단계. 한 상자에 여러 칸으로 놓는 요약 값(최저·최고, 단계별 평균) */
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 28px;
+}
+
+@layer base {
+	html {
+		scrollbar-gutter: stable;
+	}
+
+	body {
+		background-color: var(--color-background);
+		color: var(--color-text-primary);
+		font-family: var(--font-sans);
+	}
+
+	/*
+	 * 키보드 포커스 기본 표시(S15P31A403-308). 브라우저 기본 검은 테두리 대신 모든 요소가 브랜드색 테두리를 쓴다.
+	 * 마우스 클릭에는 나오지 않는다(focus-visible). 컴포넌트의 outline 유틸리티는 이 기본값보다 우선한다.
+	 * 테두리 색을 평소에도 브랜드색으로 두어, transition-colors 가 있는 요소에서 검은색→빨간색으로 번지지 않게 한다.
+	 */
+	*,
+	::before,
+	::after {
+		outline-color: var(--color-ring);
+	}
+
+	/*
+	 * 클릭하는 요소는 손가락 커서(S15P31A403-315). Tailwind v4 는 버튼 커서를 기본 화살표로 두므로
+	 * 버튼·탭·메뉴 항목·접기(summary)·선택 라벨에 한 번에 지정한다. 링크(a[href])는 브라우저 기본이 이미 손가락이다.
+	 * 누를 수 없는 상태(disabled·aria-disabled)는 제외하고, 컴포넌트의 cursor-* 유틸리티가 이 기본값보다 우선한다.
+	 */
+	button:not(:disabled),
+	[role='button']:not([aria-disabled='true']),
+	[role='tab']:not([aria-disabled='true']),
+	[role='menuitem']:not([aria-disabled='true']),
+	summary,
+	label:has(> input:not(:disabled)),
+	select:not(:disabled) {
+		cursor: pointer;
+	}
+
+	:focus-visible {
+		outline: 2px solid var(--color-ring);
+		outline-offset: 2px;
+	}
+}
+
+:root {
+	--app-header-height: 8.75rem;
+}
+@media (min-width: 48rem) {
+	:root {
+		--app-header-height: 4rem;
+	}
+}
+@media (min-width: 96rem) {
+	:root {
+		--app-header-height: 5rem;
+	}
+}
+
+.health-link-motion {
+	transition: transform 140ms ease-out;
+}
+.health-summary-card {
+	top: 0;
+	transition: top 140ms ease-out;
+}
+@media (hover: hover) {
+	.health-link-motion:hover {
+		transform: translateY(-2px);
+	}
+	.health-summary-card:has(a.health-summary-link):hover {
+		top: -2px;
+	}
+}
+.health-link-motion:active {
+	transform: scale(0.99);
+}
+.health-skeleton {
+	border-radius: 8px;
+	background-color: var(--color-surface);
+	opacity: 0;
+	animation: health-skeleton-appear 120ms ease-out 120ms forwards;
+}
+@keyframes health-skeleton-appear {
+	to {
+		opacity: 1;
+	}
+}
+@media (prefers-reduced-motion: reduce) {
+	.health-link-motion {
+		transition: none;
+		transform: none !important;
+	}
+	.health-summary-card {
+		transition: none;
+		top: 0 !important;
+	}
+	.health-skeleton {
+		animation: none;
+		opacity: 1;
+	}
+}
+
+/*
+ * 앱 전체 스크롤바(문서와 안쪽 스크롤 모두). 화면마다 모양이 달라지지 않게 한 곳에서 정한다.
+ * base 층에 두어, 스크롤바를 따로 정한 요소(근거 창의 숨긴 스크롤바 등)의 유틸리티 클래스가 이긴다
+ */
+@layer base {
+	:root,
+	* {
+		scrollbar-width: thin;
+		scrollbar-color: var(--color-coral-sub) var(--color-surface);
+	}
+	@supports selector(::-webkit-scrollbar) {
+		:root,
+		* {
+			scrollbar-width: auto;
+			scrollbar-color: auto;
+		}
+		:root::-webkit-scrollbar,
+		*::-webkit-scrollbar {
+			width: 8px;
+			height: 8px;
+		}
+		:root::-webkit-scrollbar-track,
+		*::-webkit-scrollbar-track {
+			background: var(--color-surface);
+		}
+		:root::-webkit-scrollbar-thumb,
+		*::-webkit-scrollbar-thumb {
+			background: var(--color-coral-sub);
+			border-radius: 8px;
+		}
+		:root::-webkit-scrollbar-thumb:hover,
+		*::-webkit-scrollbar-thumb:hover {
+			background: var(--color-brand);
+		}
+	}
+	@media (forced-colors: active) {
+		:root,
+		* {
+			scrollbar-color: auto;
+			scrollbar-width: auto;
+		}
+		:root::-webkit-scrollbar-thumb,
+		*::-webkit-scrollbar-thumb,
+		:root::-webkit-scrollbar-thumb:hover,
+		*::-webkit-scrollbar-thumb:hover {
+			background: CanvasText;
+		}
+		:root::-webkit-scrollbar-track,
+		*::-webkit-scrollbar-track {
+			background: Canvas;
+		}
+	}
+}

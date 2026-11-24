@@ -1,0 +1,642 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Foundations/Design Tokens" />
+
+export const cssVar = (name) => (el) => {
+	if (el) {
+		const value = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+		el.textContent = name.startsWith('--color-') ? value.toUpperCase() : value;
+	}
+};
+
+export const Swatch = ({ surface, text, label = 'Aa', outline }) => (
+	<div
+		style={{
+			width: 72,
+			maxWidth: '100%',
+			height: 32,
+			borderRadius: 8,
+			display: 'flex',
+			alignItems: 'center',
+			justifyContent: 'center',
+			fontFamily: 'var(--font-sans)',
+			fontSize: 14,
+			background: `var(--color-${surface})`,
+			color: `var(--color-${text})`,
+			border: '1px solid var(--color-border)',
+			outline: outline ? `2px solid var(--color-${outline})` : undefined,
+			outlineOffset: outline ? 2 : undefined
+		}}
+	>
+		{label}
+	</div>
+);
+
+export const ColorRows = ({ rows, label }) => (
+	<div className="token-table">
+		<table>
+			<caption>{label}</caption>
+			<thead>
+				<tr>
+					<th>Preview</th>
+					<th>Class</th>
+					<th>HEX</th>
+					<th>Usage</th>
+				</tr>
+			</thead>
+			<tbody>
+				{rows.map((row) => (
+					<tr key={row.token} data-color-token={row.token}>
+						<td>
+							<Swatch surface={row.token} text="foreground" label="" />
+						</td>
+						<td>
+							<code>{row.cls}</code>
+						</td>
+						<td>
+							<code ref={cssVar(`--color-${row.token}`)} />
+						</td>
+						<td>{row.usage}</td>
+					</tr>
+				))}
+			</tbody>
+		</table>
+	</div>
+);
+
+export const baseColors = [
+	{ token: 'background', cls: 'bg-background', usage: '페이지 배경' },
+	{
+		token: 'foreground',
+		cls: 'text-foreground',
+		usage: '제목, 핵심 수치, 중요한 본문, 선택된 메뉴'
+	},
+	{ token: 'card', cls: 'bg-card', usage: '카드, 헤더' },
+	{ token: 'card-foreground', cls: 'text-card-foreground', usage: '카드 안 글자' },
+	{ token: 'popover', cls: 'bg-popover', usage: '툴팁, 메뉴, 대화 상자' },
+	{ token: 'popover-foreground', cls: 'text-popover-foreground', usage: '떠 있는 면 위 글자' },
+	{
+		token: 'primary',
+		cls: 'bg-primary',
+		usage: '주요 버튼, Toast, 선택된 날짜와 날짜 hover의 진한 레드 면'
+	},
+	{
+		token: 'primary-hover',
+		cls: 'hover:bg-primary-hover',
+		usage: '주요 버튼 hover. 날짜 hover는 primary 사용'
+	},
+	{ token: 'primary-foreground', cls: 'text-primary-foreground', usage: '주요 면 위 밝은 글자' },
+	{ token: 'secondary', cls: 'bg-secondary', usage: '보조 버튼 배경' },
+	{ token: 'secondary-foreground', cls: 'text-secondary-foreground', usage: '보조 버튼 위 글자' },
+	{ token: 'muted', cls: 'bg-muted', usage: '보조 배경, hover 배경, Skeleton' },
+	{
+		token: 'muted-foreground',
+		cls: 'text-muted-foreground',
+		usage: '설명, 날짜, 단위, 차트 눈금, placeholder, 비선택 메뉴. 밝은 카드·페이지 배경에서 사용'
+	},
+	{ token: 'accent', cls: 'bg-accent', usage: '선택된 메뉴, 질문 말풍선의 강조 배경' },
+	{
+		token: 'accent-foreground',
+		cls: 'text-accent-foreground',
+		usage: '강조 배경 위 글자, 작은 빨간 글자'
+	},
+	{ token: 'destructive', cls: 'text-destructive', usage: '오류, 위험, 삭제 상태' },
+	{ token: 'border', cls: 'border-border', usage: '구분선, 카드 테두리' },
+	{ token: 'input', cls: 'border-input', usage: '입력창 테두리' },
+	{ token: 'ring', cls: 'outline-ring', usage: '키보드 포커스 테두리' }
+];
+
+export const extendedColors = [
+	{ token: 'brand', cls: 'bg-brand', usage: '메인 레드. 장식, 아이콘, 테두리, 차트 선, 큰 글자' },
+	{ token: 'primary-light', cls: 'disabled:bg-primary-light', usage: '비활성 버튼 배경' },
+	{ token: 'coral-main', cls: 'bg-coral-main', usage: '서비스 보조 강조색' },
+	{ token: 'coral-sub', cls: 'bg-coral-sub', usage: '연한 보조 강조색, 스크롤바 손잡이' },
+	{ token: 'coral-soft', cls: 'bg-coral-soft', usage: '서비스 보조 배경' },
+	{ token: 'success', cls: 'text-success', usage: '성공·긍정·좋음 상태' },
+	{ token: 'success-soft', cls: 'bg-success-soft', usage: '성공·긍정 상태의 보조 배경과 상세 행' },
+	{
+		token: 'success-badge',
+		cls: 'bg-success-badge',
+		usage: '홈 좋음 상태 배지 배경. 일반 soft 배경과 구분'
+	},
+	{ token: 'warning', cls: 'text-warning', usage: '주의·관심 상태' },
+	{ token: 'warning-soft', cls: 'bg-warning-soft', usage: '주의·관심 상태의 보조 배경과 상세 행' },
+	{ token: 'warning-badge', cls: 'bg-warning-badge', usage: '홈 주의 상태 배지 배경' },
+	{ token: 'info', cls: 'text-info', usage: '정보·안내 상태' },
+	{ token: 'info-soft', cls: 'bg-info-soft', usage: '정보·안내 상태의 보조 배경과 상세 행' },
+	{ token: 'info-badge', cls: 'bg-info-badge', usage: '홈 안내 상태 배지 배경' },
+	{
+		token: 'danger-soft',
+		cls: 'bg-danger-soft',
+		usage: '오류·위험 상태의 보조 배경. 글자는 destructive 사용'
+	},
+	{
+		token: 'text-disabled',
+		cls: 'disabled:text-text-disabled',
+		usage: '실제로 조작할 수 없는 요소의 글자만'
+	}
+];
+
+export const radiusScale = [
+	['rounded-xs', '--radius-xs', '2px'],
+	['rounded-sm', '--radius-sm', '4px'],
+	['rounded-md', '--radius-md', '6px'],
+	['rounded-lg', '--radius-lg', '8px'],
+	['rounded-xl', '--radius-xl', '12px'],
+	['rounded-2xl', '--radius-2xl', '16px'],
+	['rounded-3xl', '--radius-3xl', '24px'],
+	['rounded-full', null, '알약·원형: calc(infinity * 1px)']
+];
+
+export const shadowScale = [
+	['shadow-xs', '--shadow-xs'],
+	['shadow-sm', '--shadow-sm'],
+	['shadow-md', '--shadow-md'],
+	['shadow-lg', '--shadow-lg']
+];
+
+export const spacingScale = [
+	['1', '0.25rem', 4],
+	['2', '0.5rem', 8],
+	['3', '0.75rem', 12],
+	['4', '1rem', 16],
+	['6', '1.5rem', 24],
+	['8', '2rem', 32],
+	['12', '3rem', 48]
+];
+
+export const typographyRoles = [
+	{
+		cls: 'text-page-title',
+		role: '페이지 제목',
+		size: '30px',
+		weight: '700',
+		leading: '39px',
+		sample: '오늘의 건강 기록',
+		usage: '화면마다 하나인 h1. 모든 너비에서 같은 크기'
+	},
+	{
+		cls: 'text-section-title',
+		role: '섹션 제목 / 대표 heading',
+		size: '20px → lg 이상 24px',
+		weight: '700',
+		leading: '28px → lg 이상 32px',
+		sample: '일별 심박수',
+		usage: '차트·타임라인·주간 흐름·안내·대화상자 제목'
+	},
+	{
+		cls: 'text-card-title',
+		role: '카드 제목',
+		size: '16px',
+		weight: '700',
+		leading: '22px',
+		sample: '최근 7일',
+		usage: '일반 카드·목록 묶음의 이름표'
+	},
+	{
+		cls: 'text-card-title-lg',
+		role: '큰 카드 제목 / 대표 subtitle',
+		size: '18px',
+		weight: '700',
+		leading: '26px',
+		sample: '건강 기록',
+		usage: '큰 차트·강조 카드·사이드바 제목'
+	},
+	{
+		cls: 'text-metric',
+		role: '핵심 수치',
+		size: '28px',
+		weight: '700',
+		leading: '35px',
+		sample: '69.77 bpm',
+		usage: '카드의 평균·합계·측정값'
+	},
+	{
+		cls: 'text-metric-sm',
+		role: '보조 수치',
+		size: '20px',
+		weight: '700',
+		leading: '28px',
+		sample: '1시간 16분',
+		usage: '핵심 수치 아래 단계. 한 상자에 여러 칸으로 놓는 요약 값(최저·최고, 단계별 평균)'
+	}
+];
+
+export const textScale = [
+	{ cls: 'text-3xl', role: 'Tailwind 크기 단계', size: '30px', weight: '400', leading: '36px' },
+	{ cls: 'text-2xl', role: 'Tailwind 크기 단계', size: '24px', weight: '400', leading: '32px' },
+	{ cls: 'text-xl', role: 'Tailwind 크기 단계', size: '20px', weight: '400', leading: '28px' },
+	{ cls: 'text-lg', role: 'Tailwind 크기 단계', size: '18px', weight: '400', leading: '28px' },
+	{ cls: 'text-base', role: '본문 / 대표 body', size: '16px', weight: '400', leading: '24px' },
+	{
+		cls: 'text-base font-medium',
+		role: '강조 본문 / 대표 body-strong',
+		size: '16px',
+		weight: '500',
+		leading: '24px'
+	},
+	{
+		cls: 'text-sm font-bold',
+		role: '라벨 / 대표 label',
+		size: '14px',
+		weight: '700',
+		leading: '20px'
+	},
+	{
+		cls: 'text-sm',
+		role: '보조 본문 / 대표 body-sm',
+		size: '14px',
+		weight: '400',
+		leading: '20px'
+	},
+	{ cls: 'text-xs', role: '캡션 / 대표 caption', size: '12px', weight: '400', leading: '16px' }
+];
+
+<div className="design-tokens">
+
+# Design Tokens
+
+CANDiY-FiT Web의 현재 색상·형태·글자 기준을 한곳에서 확인한다.
+기준 문서는 `docs/design-system.md`, 서비스 토큰과 역할 유틸리티는 `src/routes/layout.css`다.
+색상 HEX는 실제 CSS에서 읽고, radius·shadow 예시는 현재 Tailwind 유틸리티를 적용한다.
+
+[Colors](#colors) · [Radius & Shadow](#radius-shadow) · [Typography](#typography)
+
+<h2 id="colors">Colors</h2>
+
+### 토큰과 사용 클래스
+
+색은 면(surface)과 그 위 글자·아이콘의 역할로 구분한다. 면 이름에 `-foreground`를 붙이면 해당 면의 글자 역할을 뜻한다.
+컴포넌트에서는 `bg-primary`, `text-foreground`, `border-border` 같은 의미 기반 클래스를 사용한다.
+
+<div className="token-table">
+	<table>
+		<thead>
+			<tr>
+				<th>구분</th>
+				<th>예시</th>
+				<th>사용 기준</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>원시 값</td>
+				<td>
+					<code ref={cssVar('--color-muted-foreground')} />
+				</td>
+				<td>layout.css의 @theme에서만 관리</td>
+			</tr>
+			<tr>
+				<td>시맨틱 토큰</td>
+				<td>
+					<code>--color-muted-foreground</code>
+				</td>
+				<td>색상의 역할을 정의</td>
+			</tr>
+			<tr>
+				<td>Tailwind 클래스</td>
+				<td>
+					<code>text-muted-foreground</code>
+				</td>
+				<td>화면과 컴포넌트에서 사용</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<ColorRows rows={baseColors} label="시맨틱 색상" />
+
+**primary는 글자가 올라가는 진한 레드 면, brand는 장식·아이콘·차트의 메인 레드다.**
+포커스 테두리는 `outline-ring`, 작은 빨간 글자는 `text-accent-foreground`를 사용한다.
+`chart-1`~`chart-5`, `sidebar-*`는 현재 프로젝트 토큰으로 정의하지 않았다.
+
+### 보조 색상과 상태
+
+<ColorRows rows={extendedColors} label="프로젝트 보조·상태 색상" />
+
+### 사용 및 접근성 기준
+
+- 같은 의미의 색에 다른 HEX를 만들지 않는다. 반복되는 arbitrary value는 토큰 또는 공통 스타일로 정리한다.
+- Kakao·Google 등 외부 브랜드 색은 서비스 의미 토큰과 별도로 관리한다.
+- 상태는 색만으로 구분하지 않고 글자·아이콘을 함께 사용한다.
+- **비선택과 비활성은 다르다.** 읽어야 하는 설명·오류·결측 안내·비선택 메뉴·placeholder에는 `text-text-disabled`를 쓰지 않는다.
+- 보조 글자 `text-muted-foreground`는 페이지 배경(4.61:1)과 카드(4.77:1)에서 사용한다. 연한 muted·accent·coral 배경에서는 일반 글자에 `text-foreground`를 사용한다.
+- `primary` 위 `primary-foreground` 대비는 4.76:1, 버튼 hover인 `primary-hover` 위에서는 5.67:1이다.
+- `brand` 위 밝은 글자는 약 3.03:1이다. 작은 본문에 쓰지 않고 장식·아이콘·큰 글자에 사용한다. 큰 글자 기준은 일반 24px 이상 또는 굵게 18.66px 이상이다.
+- 실제 비활성 버튼의 `primary-light` 배경은 비활성 UI의 대비 예외로 유지한다. 일반 글자는 4.5:1, 큰 글자·비텍스트 정보는 3:1 기준을 확인한다.
+- 색상 대비는 `src/routes/color-contrast.spec.ts`, 토큰 참조 관계는 `src/routes/theme-alias.spec.ts`가 검사한다.
+
+```html
+<div class="bg-card text-card-foreground">카드와 그 위 글자</div>
+<div class="bg-muted text-foreground">연한 보조 배경 위 일반 글자</div>
+<button class="bg-primary text-primary-foreground hover:bg-primary-hover">주요 동작</button>
+```
+
+### 상태별 적용 예시
+
+<div className="token-table">
+	<table>
+		<thead>
+			<tr>
+				<th>상태</th>
+				<th>Preview</th>
+				<th>사용 클래스</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>기본</td>
+				<td>
+					<Swatch surface="card" text="muted-foreground" label="건강" />
+				</td>
+				<td>
+					<code>text-muted-foreground</code>
+				</td>
+			</tr>
+			<tr>
+				<td>hover</td>
+				<td>
+					<Swatch surface="muted" text="foreground" label="건강" />
+				</td>
+				<td>
+					<code>hover:bg-muted hover:text-foreground</code>
+				</td>
+			</tr>
+			<tr>
+				<td>현재 페이지</td>
+				<td>
+					<Swatch surface="accent" text="foreground" label="건강" />
+				</td>
+				<td>
+					<code>aria-[current=page]:bg-accent aria-[current=page]:text-foreground font-bold</code>
+				</td>
+			</tr>
+			<tr>
+				<td>키보드 포커스</td>
+				<td>
+					<Swatch surface="card" text="foreground" label="건강" outline="ring" />
+				</td>
+				<td>
+					<code>focus-visible:outline-2 focus-visible:outline-ring</code> · 마우스 클릭에는 표시하지
+					않음
+				</td>
+			</tr>
+			<tr>
+				<td>비활성</td>
+				<td>
+					<Swatch surface="card" text="text-disabled" label="건강" />
+				</td>
+				<td>
+					<code>disabled:text-text-disabled</code> · 실제 조작 불가 상태이며 손가락 커서도 제거
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<h2 id="radius-shadow">Radius &amp; Shadow</h2>
+
+### Radius 기준과 현재 유틸리티
+
+4의 배수인 4·8·12·16px을 우선하고, 필요한 예외는 2·6px 같은 짝수를 사용한다.
+같은 역할의 컴포넌트에는 같은 radius를 적용한다. Tailwind 기본 단계를 사용하며 shadcn의 `--radius` 계산식은 사용하지 않는다.
+기존 Figma에 확정된 다른 값은 유지하고, 이 표에 맞추기 위한 서비스 UI 일괄 변경은 하지 않는다.
+
+<div className="token-table">
+	<table>
+		<thead>
+			<tr>
+				<th>Class</th>
+				<th>현재 CSS 값</th>
+				<th>기본 16px 루트 기준</th>
+				<th>Preview</th>
+			</tr>
+		</thead>
+		<tbody>
+			{radiusScale.map(([cls, token, value]) => (
+				<tr key={cls} data-radius-class={cls}>
+					<td>
+						<code>{cls}</code>
+					</td>
+					<td>{token ? <code ref={cssVar(token)} /> : <code>calc(infinity * 1px)</code>}</td>
+					<td>{value}</td>
+					<td>
+						<div
+							className={cls}
+							style={{
+								width: 96,
+								height: 40,
+								background: 'var(--color-muted)',
+								border: '1px solid var(--color-border)'
+							}}
+						/>
+					</td>
+				</tr>
+			))}
+		</tbody>
+	</table>
+</div>
+
+### Shadow 기준과 실제 예시
+
+프로젝트 기준은 X / Y / Blur가 **2 / 2 / 2 또는 0 / 2 / 2px**, Spread는 **0**이다.
+색상·opacity는 확정 Figma를 우선하고, 같은 역할의 card·floating UI에는 같은 기준을 적용한다.
+프로젝트 공통 shadow 색상·opacity와 전용 토큰은 아직 확정되지 않았으므로 임의의 새 값을 기준으로 지정하지 않는다.
+
+아래는 **현재 Tailwind 기본 shadow 유틸리티**의 값과 예시다. 위 프로젝트 offset 기준과 동일하다는 뜻은 아니며, 기존 화면의 확정 shadow를 이 예시로 일괄 바꾸지 않는다.
+
+<div className="token-table">
+	<table>
+		<thead>
+			<tr>
+				<th>Class</th>
+				<th>현재 CSS 값</th>
+				<th>Preview</th>
+			</tr>
+		</thead>
+		<tbody>
+			{shadowScale.map(([cls, token]) => (
+				<tr key={cls} data-shadow-class={cls}>
+					<td>
+						<code>{cls}</code>
+					</td>
+					<td>
+						<code ref={cssVar(token)} />
+					</td>
+					<td>
+						<div
+							className={cls}
+							style={{
+								width: 96,
+								height: 40,
+								margin: '8px',
+								borderRadius: 12,
+								background: 'var(--color-card)'
+							}}
+						/>
+					</td>
+				</tr>
+			))}
+		</tbody>
+	</table>
+</div>
+
+### Spacing
+
+기본 단위는 <code ref={cssVar('--spacing')} />(기본 루트에서 4px)다. `p-4`, `gap-2`, `mt-6`처럼 숫자 단계로 사용한다.
+
+<div className="token-table token-table-compact">
+	<table>
+		<thead>
+			<tr>
+				<th>단계</th>
+				<th>기본 16px 루트 기준</th>
+				<th>Preview</th>
+			</tr>
+		</thead>
+		<tbody>
+			{spacingScale.map(([step, rem, px]) => (
+				<tr key={step}>
+					<td>
+						<code>{step}</code>
+					</td>
+					<td>
+						{rem} · {px}px
+					</td>
+					<td>
+						<div
+							style={{
+								width: `calc(var(--spacing) * ${step})`,
+								height: 12,
+								borderRadius: 2,
+								background: 'var(--color-brand)'
+							}}
+						/>
+					</td>
+				</tr>
+			))}
+		</tbody>
+	</table>
+</div>
+
+<h2 id="typography">Typography</h2>
+
+### Font Family와 굵기
+
+`font-sans`의 실제 값은 <code ref={cssVar('--font-sans')} />다. Paperlogy는 weight별로 family를 나누지 않는다.
+WOFF2 9개는 Thin(100) · ExtraLight(200) · Light(300) · Regular(400) · Medium(500) · SemiBold(600) · Bold(700) · ExtraBold(800) · Black(900)으로 등록되어 있다.
+`font-style: normal`, `font-display: swap`이며 주로 `font-normal`(400)·`font-medium`(500)·`font-semibold`(600)·`font-bold`(700)를 사용한다. 라이선스는 `static/Paperlogy-OFL.txt`다.
+
+### 제목·수치 역할 유틸리티
+
+역할 클래스는 크기·굵기·줄 높이를 함께 지정한다. 같은 요소에 `text-[…]`·`font-*`·`leading-*`를 겹쳐 쓰지 않는다.
+`lg`는 Tailwind 기본 64rem(기본 루트에서 1024px)이다.
+
+<div className="token-table">
+	<table>
+		<thead>
+			<tr>
+				<th>역할</th>
+				<th>Class</th>
+				<th>크기 / 굵기 / 줄 높이</th>
+				<th>예시와 용도</th>
+			</tr>
+		</thead>
+		<tbody>
+			{typographyRoles.map((row) => (
+				<tr key={row.cls}>
+					<td>{row.role}</td>
+					<td>
+						<code>{row.cls}</code>
+					</td>
+					<td>
+						{row.size} / {row.weight} / {row.leading}
+					</td>
+					<td>
+						<span className={row.cls} data-typography={row.cls}>
+							{row.sample}
+						</span>
+						<p>{row.usage}</p>
+					</td>
+				</tr>
+			))}
+		</tbody>
+	</table>
+</div>
+
+### Tailwind 크기 단계·본문·라벨
+
+아래 예시는 일반 본문·라벨의 선택 기준과 Tailwind 기본 줄 높이다. 제목·수치에는 위 역할 유틸리티를 우선한다.
+동일한 글자 크기여도 역할 유틸리티의 줄 높이·반응형 동작은 Tailwind 기본 단계와 다를 수 있다.
+
+<div className="token-table">
+	<table>
+		<thead>
+			<tr>
+				<th>역할</th>
+				<th>Class</th>
+				<th>크기 / 굵기 / 줄 높이</th>
+				<th>Preview</th>
+			</tr>
+		</thead>
+		<tbody>
+			{textScale.map((row) => (
+				<tr key={row.cls}>
+					<td>{row.role}</td>
+					<td>
+						<code>{row.cls}</code>
+					</td>
+					<td>
+						{row.size} / {row.weight} / {row.leading}
+					</td>
+					<td>
+						<span className={row.cls} data-typography={row.cls}>
+							오늘의 건강 기록
+						</span>
+					</td>
+				</tr>
+			))}
+			<tr>
+				<td>대표 title</td>
+				<td>별도 역할 유틸리티가 아닌 Figma 선택 기준</td>
+				<td>28px / 700 / Figma AUTO</td>
+				<td>
+					<span
+						style={{
+							fontFamily: 'var(--font-sans)',
+							fontSize: 28,
+							fontWeight: 700,
+							lineHeight: 'normal'
+						}}
+					>
+						오늘의 건강 기록
+					</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+- 대표 subtitle·heading은 위 역할 표에 함께 표시했다. 대표 title을 페이지 제목 역할 클래스 대신 적용하지 않는다.
+- AI 코칭 질문·답변 본문은 모두 16px이다. 답변 첫 줄은 17px SemiBold, 소제목은 17px Bold, 답변 본문 줄간격은 1.7이다.
+- 보조 텍스트는 차트 눈금 12px, 날짜 12~14px, 단위는 붙는 수치에 맞춘다. 하나의 크기로 일괄 통일하지 않는다.
+- Figma의 line-height가 AUTO인 곳에 임의의 공통 line-height 체계를 추가하지 않는다.
+- 기존 Figma의 13·15·17·24·26px 등 확정값은 유지한다. 새로운 size·weight 조합은 불필요하게 늘리지 않으며, 신규 화면은 역할·대표 기준을 먼저 사용한다.
+
+### 반응형 및 의도된 예외
+
+- 홈 대표 점수와 건강 지표 카드의 제목·수치: 화면·카드 폭에 맞춰 커지는 강조 영역
+- 홈 점수 설명 패널 제목(`HomeScoreSummary`): 28px 유지
+- 오류 화면 대표 문구와 AI 코치 첫 화면 인사(`CoachingWelcome`): 화면의 대표 문구
+- 로그인·가입·인증 상태 화면 제목: 별도 좌측 안내 레이아웃의 기존 크기 유지
+- 마이페이지 제목: `lg`에서 높이에 맞춰 줄어드는 `--page-title`(22~30px)
+- **확인 필요:** 수면 일별 상세 제목(24px, `sm` 이상 30px)과 핵심 수치(25px)는 공통 역할 적용 여부가 미확정이므로 현행 유지
+- 제목·수치를 바꾸면 360·390·768·1366px에서 줄바꿈·넘침·위계를 확인한다. 별도 breakpoint를 임의로 추가하지 않는다.
+
+### 검증 기준
+
+- 색상 대비·참조 관계: `color-contrast.spec.ts`, `theme-alias.spec.ts`
+- 실제 화면: 제목·수치·AI 질문/답변 크기, 메뉴 상태, 360·390·768·1366px의 넘침 확인
+- 디자인 기준을 바꿀 때 `docs/design-system.md`와 이 문서를 함께 확인한다.
+
+</div>

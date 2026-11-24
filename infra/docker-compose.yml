@@ -1,0 +1,185 @@
+# 로컬 개발용 인프라이자 싸피 개발 서버 배포 정의. 실행 방법은 infra/README.md 참고.
+# 저장소 루트에서: docker compose --env-file .env -f infra/docker-compose.yml up -d
+
+name: candiy-fit
+
+# 컨테이너 로그 크기 제한 (S15P31A403-255). Docker 기본은 로그 파일을 제한 없이 키운다.
+# 컨테이너마다 10MB 파일 3개(최대 30MB)만 남기고 오래된 것부터 지운다. 바꾸면 컨테이너를 다시 만들 때 적용된다
+x-logging: &default-logging
+  driver: json-file
+  options:
+    max-size: "10m"
+    max-file: "3"
+
+services:
+  postgres:
+    logging: *default-logging
+    image: postgres:16-alpine
+    container_name: candiy-fit-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:?POSTGRES_DB가 .env에 없습니다}
+      POSTGRES_USER: ${POSTGRES_USER:?POSTGRES_USER가 .env에 없습니다}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?POSTGRES_PASSWORD가 .env에 없습니다}
+      TZ: Asia/Seoul
+      PGTZ: Asia/Seoul
+    # 이 컴퓨터 안(127.0.0.1)에서만 접속을 받는다. Docker가 연 포트는 ufw 규칙을 거치지 않아
+    # 0.0.0.0으로 열면 서버 방화벽과 상관없이 외부에서 DB에 접속할 수 있다. 서버 DB는 SSH 터널로 본다.
+    ports:
+      - "127.0.0.1:${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  # DB 마이그레이션 (Alembic). postgres가 준비되면 alembic upgrade head를 한 번 실행하고 끝난다.
+  # 리비전은 backend/alembic/versions/ 에 둔다. 규칙은 infra/README.md 참고.
+  # 백엔드 이미지를 같이 쓴다 (S15P31A403-97). backend 서비스와 build가 같아 한 번만 빌드된다
+  migrate:
+    logging: *default-logging
+    build: &backend-build
+      context: ..
+      dockerfile: backend/Dockerfile
+    image: candiy-fit-backend
+    container_name: candiy-fit-migrate
+    command: ["alembic", "upgrade", "head"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: "5432"
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    restart: "no"
+
+  # 백엔드 API (S15P31A403-97). 기본 up에서는 켜지지 않는다 (로컬은 uv run uvicorn으로 띄운다, backend/README.md).
+  # 개발 서버 배포(deploy-dev)가 --profile app으로 띄운다.
+  # 외부 포트를 열지 않는다. compose 내부 네트워크에서 nginx(S15P31A403-98)만 backend:8000으로 접근한다
+  backend:
+    logging: *default-logging
+    build: *backend-build
+    image: candiy-fit-backend
+    container_name: candiy-fit-backend
+    profiles: ["app"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+      migrate:
+        condition: service_completed_successfully
+    env_file: ../.env
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: "5432"
+      TZ: Asia/Seoul
+      # LangSmith 추적은 항상 끈다 (S15P31A403-124). 켜지면 대화·건강 수치가 외부로 나가므로 코칭이 실행을 거부한다
+      # (ai/src/coach_ai/security/tracing.py, -89). environment가 .env보다 우선이라 .env를 잘못 고쳐도 코칭이 멈추지 않는다
+      LANGSMITH_TRACING: "false"
+      LANGSMITH_TRACING_V2: "false"
+      LANGCHAIN_TRACING: "false"
+      LANGCHAIN_TRACING_V2: "false"
+    expose:
+      - "8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/healthz', timeout=3)"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+      start_period: 15s
+    restart: unless-stopped
+
+  # 앞단 nginx (S15P31A403-98). 개발 서버에서만 띄운다 (edge 프로필, 인증서가 서버에만 있다).
+  # 밖으로 열리는 문은 이 80/443뿐이다. /api/·/healthz는 backend로, /는 웹으로 보낸다 (infra/nginx/templates)
+  # 웹(SvelteKit 정적 SPA)은 이미지 빌드 때 함께 넣는다 (infra/nginx/Dockerfile, S15P31A403-99)
+  # 6시간마다 설정을 다시 읽어 certbot이 갱신한 인증서를 쓴다
+  nginx:
+    logging: *default-logging
+    build:
+      context: ..
+      dockerfile: infra/nginx/Dockerfile
+      # 웹 소셜 로그인 공개값. 빌드 때 번들에 들어가므로 서버 .env의 백엔드 값을 그대로 넘긴다 (S15P31A403-148)
+      args:
+        PUBLIC_GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID:-}
+        PUBLIC_KAKAO_REST_API_KEY: ${KAKAO_REST_API_KEY:-}
+        # 앱 연동 안내. 서버 .env 에 PUBLIC_APP_CONNECTION_GUIDE=true 가 있을 때만 켠다 (S15P31A403-421)
+        PUBLIC_APP_CONNECTION_GUIDE: ${PUBLIC_APP_CONNECTION_GUIDE:-false}
+    image: candiy-fit-nginx
+    container_name: candiy-fit-nginx
+    profiles: ["edge"]
+    depends_on:
+      backend:
+        condition: service_healthy
+    environment:
+      NGINX_SERVER_NAME: ${NGINX_SERVER_NAME:-k15a403.p.ssafy.io}
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ${CERT_DIR:-/srv/candiy-fit/letsencrypt}:/etc/letsencrypt:ro
+      - ${ACME_WEBROOT:-/srv/candiy-fit/certbot-www}:/var/www/certbot:ro
+    command:
+      - /bin/sh
+      - -c
+      - while :; do sleep 6h & wait $${!}; nginx -s reload; done & exec /docker-entrypoint.sh nginx -g 'daemon off;'
+    restart: unless-stopped
+
+  # HTTPS 인증서 자동 갱신 (Let's Encrypt). 12시간마다 만료가 가까운지 보고 갱신한다.
+  # 처음 발급은 서버에서 한 번 직접 한다 (infra/README.md "HTTPS 인증서")
+  certbot:
+    logging: *default-logging
+    image: certbot/certbot:v4.1.1
+    container_name: candiy-fit-certbot
+    profiles: ["edge"]
+    volumes:
+      - ${CERT_DIR:-/srv/candiy-fit/letsencrypt}:/etc/letsencrypt
+      - ${ACME_WEBROOT:-/srv/candiy-fit/certbot-www}:/var/www/certbot
+    entrypoint:
+      - /bin/sh
+      - -c
+      - trap exit TERM; while :; do certbot renew --webroot -w /var/www/certbot --quiet; sleep 12h & wait $${!}; done
+    restart: unless-stopped
+
+  # 서버 상태·인증서 만료·디스크 감시 (S15P31A403-119). 5분마다 확인해 문제가 생기면 MM 알림 채널로 보낸다.
+  # 개발 서버에서만 띄운다 (edge 프로필). 동작은 infra/monitor/monitor.sh, 확인 방법은 infra/README.md 참고
+  # 웹훅은 파이프라인 알림과 같은 채널 것을 쓴다. 비어 있으면 알리지 않고 로그만 남긴다
+  monitor:
+    logging: *default-logging
+    build: ./monitor
+    image: candiy-fit-monitor
+    container_name: candiy-fit-monitor
+    profiles: ["edge"]
+    depends_on:
+      - nginx
+    environment:
+      MONITOR_DOMAIN: ${NGINX_SERVER_NAME:-k15a403.p.ssafy.io}
+      MONITOR_NAME: ${PIPELINE_ALERT_NAME:-개발 서버}
+      MONITOR_WEBHOOK_URL: ${PIPELINE_ALERT_WEBHOOK_URL:-}
+    restart: unless-stopped
+
+  # 데이터 파이프라인 주기 실행 (PIPE-07). 기본 up에서는 켜지지 않는다 (CANDiY를 계속 부르므로).
+  # 켜기: docker compose --env-file .env -f infra/docker-compose.yml --profile pipeline up -d --build
+  pipeline:
+    logging: *default-logging
+    build: ../data/pipeline
+    image: candiy-fit-pipeline
+    container_name: candiy-fit-pipeline
+    profiles: ["pipeline"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+      migrate:
+        condition: service_completed_successfully
+    env_file: ../.env
+    environment:
+      # 컨테이너 안에서는 compose 네트워크의 postgres로 붙는다 (.env의 localhost 대신)
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: "5432"
+      TZ: Asia/Seoul
+    restart: unless-stopped
+
+volumes:
+  postgres-data:

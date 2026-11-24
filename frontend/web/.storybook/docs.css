@@ -1,0 +1,58 @@
+/*
+ * preview.ts 가 불러오는 src/routes/layout.css 에는 Tailwind preflight 가 포함되어 있어
+ * Storybook 문서(MDX) 페이지의 목록 표시와 제목 굵기까지 초기화한다.
+ * 문서 페이지(.sbdocs) 안에서만 그 부분을 되돌린다. component Story 화면에는 영향이 없다.
+ */
+.sbdocs ol {
+	list-style: decimal;
+	padding-left: 1.5em;
+}
+
+.sbdocs ul {
+	list-style: disc;
+	padding-left: 1.5em;
+}
+
+.sbdocs h2,
+.sbdocs h3 {
+	font-weight: 700;
+}
+
+/* 통합 토큰 문서의 표만 가로로 탐색한다. 좁은 화면에서도 각 열의 내용을 유지한다. */
+.sbdocs .design-tokens .token-table {
+	max-width: 100%;
+	overflow-x: auto;
+	margin: 16px 0;
+}
+
+.sbdocs .design-tokens .token-table table {
+	width: 100%;
+	min-width: 600px;
+	margin: 0;
+}
+
+.sbdocs .design-tokens .token-table-compact table {
+	width: auto;
+	min-width: 0;
+}
+
+.sbdocs .design-tokens .token-table caption {
+	text-align: left;
+	font-weight: 700;
+	padding-bottom: 8px;
+}
+
+.sbdocs .design-tokens :not(pre) > code {
+	white-space: normal;
+	overflow-wrap: anywhere;
+}
+
+.sbdocs .design-tokens [data-color-token] td:nth-child(3) code {
+	white-space: nowrap;
+}
+
+/* Storybook의 span 기본 글꼴·크기 대신 서비스 유틸리티의 실제 예시를 표시한다. */
+.sbdocs .design-tokens [data-typography] {
+	font-family: var(--font-sans);
+	font-size: revert-layer;
+}

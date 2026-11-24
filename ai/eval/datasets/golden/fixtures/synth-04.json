@@ -1,0 +1,1239 @@
+{
+  "persona": "synth-04",
+  "user_id": "d57b105b-3c36-462f-ad8e-bcca6916f747",
+  "now": "2026-10-22T21:00:00+09:00",
+  "linked_from": "2026-09-18",
+  "steps": [
+    {
+      "date": "2026-09-18",
+      "steps": 3191
+    },
+    {
+      "date": "2026-09-19",
+      "steps": 1730
+    },
+    {
+      "date": "2026-09-20",
+      "steps": 1949
+    },
+    {
+      "date": "2026-09-21",
+      "steps": 3199
+    },
+    {
+      "date": "2026-09-22",
+      "steps": 3031
+    },
+    {
+      "date": "2026-09-23",
+      "steps": 1868
+    },
+    {
+      "date": "2026-09-24",
+      "steps": 3169
+    },
+    {
+      "date": "2026-09-25",
+      "steps": 3109
+    },
+    {
+      "date": "2026-09-26",
+      "steps": 1787
+    },
+    {
+      "date": "2026-09-27",
+      "steps": 1498
+    },
+    {
+      "date": "2026-09-28",
+      "steps": 3353
+    },
+    {
+      "date": "2026-09-29",
+      "steps": 2467
+    },
+    {
+      "date": "2026-09-30",
+      "steps": 3008
+    },
+    {
+      "date": "2026-10-01",
+      "steps": 3124
+    },
+    {
+      "date": "2026-10-02",
+      "steps": 2823
+    },
+    {
+      "date": "2026-10-03",
+      "steps": 2156
+    },
+    {
+      "date": "2026-10-04",
+      "steps": 2050
+    },
+    {
+      "date": "2026-10-05",
+      "steps": 3019
+    },
+    {
+      "date": "2026-10-06",
+      "steps": 2853
+    },
+    {
+      "date": "2026-10-07",
+      "steps": 2661
+    },
+    {
+      "date": "2026-10-08",
+      "steps": 3315
+    },
+    {
+      "date": "2026-10-09",
+      "steps": 2936
+    },
+    {
+      "date": "2026-10-10",
+      "steps": 1813
+    },
+    {
+      "date": "2026-10-11",
+      "steps": 1735
+    },
+    {
+      "date": "2026-10-12",
+      "steps": 2824
+    },
+    {
+      "date": "2026-10-13",
+      "steps": 2885
+    },
+    {
+      "date": "2026-10-14",
+      "steps": 2887
+    },
+    {
+      "date": "2026-10-15",
+      "steps": 2970
+    },
+    {
+      "date": "2026-10-16",
+      "steps": 1864
+    },
+    {
+      "date": "2026-10-17",
+      "steps": 2096
+    },
+    {
+      "date": "2026-10-18",
+      "steps": 1684
+    },
+    {
+      "date": "2026-10-19",
+      "steps": 3063
+    },
+    {
+      "date": "2026-10-20",
+      "steps": 2057
+    },
+    {
+      "date": "2026-10-21",
+      "steps": 1700
+    },
+    {
+      "date": "2026-10-22",
+      "steps": 2793
+    }
+  ],
+  "heart": [
+    {
+      "date": "2026-09-18",
+      "hr_avg": 76.2,
+      "hr_min": 56,
+      "hr_max": 106,
+      "hours": 23
+    },
+    {
+      "date": "2026-09-19",
+      "hr_avg": 74.4,
+      "hr_min": 55,
+      "hr_max": 101,
+      "hours": 23
+    },
+    {
+      "date": "2026-09-20",
+      "hr_avg": 73.1,
+      "hr_min": 53,
+      "hr_max": 96,
+      "hours": 24
+    },
+    {
+      "date": "2026-09-21",
+      "hr_avg": 74.6,
+      "hr_min": 54,
+      "hr_max": 101,
+      "hours": 24
+    },
+    {
+      "date": "2026-09-22",
+      "hr_avg": 75.0,
+      "hr_min": 53,
+      "hr_max": 102,
+      "hours": 24
+    },
+    {
+      "date": "2026-09-23",
+      "hr_avg": 76.1,
+      "hr_min": 54,
+      "hr_max": 94,
+      "hours": 24
+    },
+    {
+      "date": "2026-09-24",
+      "hr_avg": 75.7,
+      "hr_min": 51,
+      "hr_max": 104,
+      "hours": 24
+    },
+    {
+      "date": "2026-09-25",
+      "hr_avg": 74.9,
+      "hr_min": 57,
+      "hr_max": 106,
+      "hours": 23
+    },
+    {
+      "date": "2026-09-26",
+      "hr_avg": 74.4,
+      "hr_min": 54,
+      "hr_max": 95,
+      "hours": 24
+    },
+    {
+      "date": "2026-09-27",
+      "hr_avg": 75.6,
+      "hr_min": 54,
+      "hr_max": 95,
+      "hours": 24
+    },
+    {
+      "date": "2026-09-28",
+      "hr_avg": 77.1,
+      "hr_min": 57,
+      "hr_max": 104,
+      "hours": 24
+    },
+    {
+      "date": "2026-09-29",
+      "hr_avg": 75.6,
+      "hr_min": 57,
+      "hr_max": 105,
+      "hours": 24
+    },
+    {
+      "date": "2026-09-30",
+      "hr_avg": 76.9,
+      "hr_min": 51,
+      "hr_max": 109,
+      "hours": 24
+    },
+    {
+      "date": "2026-10-01",
+      "hr_avg": 75.6,
+      "hr_min": 54,
+      "hr_max": 102,
+      "hours": 24
+    },
+    {
+      "date": "2026-10-02",
+      "hr_avg": 75.6,
+      "hr_min": 57,
+      "hr_max": 106,
+      "hours": 23
+    },
+    {
+      "date": "2026-10-03",
+      "hr_avg": 76.1,
+      "hr_min": 58,
+      "hr_max": 92,
+      "hours": 24
+    },
+    {
+      "date": "2026-10-04",
+      "hr_avg": 75.1,
+      "hr_min": 56,
+      "hr_max": 103,
+      "hours": 24
+    },
+    {
+      "date": "2026-10-05",
+      "hr_avg": 77.0,
+      "hr_min": 57,
+      "hr_max": 103,
+      "hours": 23
+    },
+    {
+      "date": "2026-10-06",
+      "hr_avg": 74.2,
+      "hr_min": 55,
+      "hr_max": 103,
+      "hours": 24
+    },
+    {
+      "date": "2026-10-07",
+      "hr_avg": 75.4,
+      "hr_min": 57,
+      "hr_max": 105,
+      "hours": 24
+    },
+    {
+      "date": "2026-10-08",
+      "hr_avg": 75.3,
+      "hr_min": 56,
+      "hr_max": 103,
+      "hours": 24
+    },
+    {
+      "date": "2026-10-09",
+      "hr_avg": 76.6,
+      "hr_min": 55,
+      "hr_max": 103,
+      "hours": 24
+    },
+    {
+      "date": "2026-10-10",
+      "hr_avg": 73.7,
+      "hr_min": 56,
+      "hr_max": 94,
+      "hours": 24
+    },
+    {
+      "date": "2026-10-11",
+      "hr_avg": 73.7,
+      "hr_min": 56,
+      "hr_max": 92,
+      "hours": 24
+    },
+    {
+      "date": "2026-10-12",
+      "hr_avg": 76.5,
+      "hr_min": 55,
+      "hr_max": 101,
+      "hours": 24
+    },
+    {
+      "date": "2026-10-13",
+      "hr_avg": 76.9,
+      "hr_min": 54,
+      "hr_max": 104,
+      "hours": 24
+    },
+    {
+      "date": "2026-10-14",
+      "hr_avg": 75.9,
+      "hr_min": 56,
+      "hr_max": 103,
+      "hours": 24
+    },
+    {
+      "date": "2026-10-15",
+      "hr_avg": 75.1,
+      "hr_min": 56,
+      "hr_max": 102,
+      "hours": 24
+    },
+    {
+      "date": "2026-10-16",
+      "hr_avg": 75.9,
+      "hr_min": 57,
+      "hr_max": 94,
+      "hours": 24
+    },
+    {
+      "date": "2026-10-17",
+      "hr_avg": 74.8,
+      "hr_min": 54,
+      "hr_max": 94,
+      "hours": 24
+    },
+    {
+      "date": "2026-10-18",
+      "hr_avg": 74.7,
+      "hr_min": 57,
+      "hr_max": 102,
+      "hours": 24
+    },
+    {
+      "date": "2026-10-19",
+      "hr_avg": 77.1,
+      "hr_min": 53,
+      "hr_max": 103,
+      "hours": 24
+    },
+    {
+      "date": "2026-10-20",
+      "hr_avg": 73.7,
+      "hr_min": 57,
+      "hr_max": 95,
+      "hours": 23
+    },
+    {
+      "date": "2026-10-21",
+      "hr_avg": 74.9,
+      "hr_min": 54,
+      "hr_max": 100,
+      "hours": 24
+    },
+    {
+      "date": "2026-10-22",
+      "hr_avg": 75.9,
+      "hr_min": 52,
+      "hr_max": 106,
+      "hours": 20
+    }
+  ],
+  "sleep": [
+    {
+      "date": "2026-09-19",
+      "start_at": "2026-09-19T00:22:59+09:00",
+      "end_at": "2026-09-19T07:24:59+09:00",
+      "is_main": true,
+      "sleep_minutes": 413,
+      "deep_minutes": 69,
+      "rem_minutes": 100,
+      "light_minutes": 244,
+      "awake_minutes": 9,
+      "spo2_avg": 96.5,
+      "spo2_min": 96.2,
+      "spo2_max": 96.8
+    },
+    {
+      "date": "2026-09-20",
+      "start_at": "2026-09-20T00:14:26+09:00",
+      "end_at": "2026-09-20T08:23:26+09:00",
+      "is_main": true,
+      "sleep_minutes": 472,
+      "deep_minutes": 63,
+      "rem_minutes": 127,
+      "light_minutes": 282,
+      "awake_minutes": 17,
+      "spo2_avg": 96.5,
+      "spo2_min": 95.5,
+      "spo2_max": 97.4
+    },
+    {
+      "date": "2026-09-21",
+      "start_at": "2026-09-20T23:22:15+09:00",
+      "end_at": "2026-09-21T06:14:15+09:00",
+      "is_main": true,
+      "sleep_minutes": 402,
+      "deep_minutes": 62,
+      "rem_minutes": 85,
+      "light_minutes": 255,
+      "awake_minutes": 10,
+      "spo2_avg": 95.8,
+      "spo2_min": 95.4,
+      "spo2_max": 96.2
+    },
+    {
+      "date": "2026-09-22",
+      "start_at": "2026-09-21T23:30:10+09:00",
+      "end_at": "2026-09-22T07:13:10+09:00",
+      "is_main": true,
+      "sleep_minutes": 450,
+      "deep_minutes": 50,
+      "rem_minutes": 135,
+      "light_minutes": 265,
+      "awake_minutes": 13,
+      "spo2_avg": 96.0,
+      "spo2_min": 95.4,
+      "spo2_max": 97.1
+    },
+    {
+      "date": "2026-09-23",
+      "start_at": "2026-09-22T23:27:49+09:00",
+      "end_at": "2026-09-23T05:59:49+09:00",
+      "is_main": true,
+      "sleep_minutes": 382,
+      "deep_minutes": 70,
+      "rem_minutes": 95,
+      "light_minutes": 217,
+      "awake_minutes": 10,
+      "spo2_avg": 96.6,
+      "spo2_min": 95.7,
+      "spo2_max": 97.7
+    },
+    {
+      "date": "2026-09-24",
+      "start_at": "2026-09-23T23:51:43+09:00",
+      "end_at": "2026-09-24T07:50:43+09:00",
+      "is_main": true,
+      "sleep_minutes": 458,
+      "deep_minutes": 50,
+      "rem_minutes": 119,
+      "light_minutes": 289,
+      "awake_minutes": 21,
+      "spo2_avg": 95.7,
+      "spo2_min": 94.8,
+      "spo2_max": 96.5
+    },
+    {
+      "date": "2026-09-25",
+      "start_at": "2026-09-24T23:16:48+09:00",
+      "end_at": "2026-09-25T06:56:48+09:00",
+      "is_main": true,
+      "sleep_minutes": 443,
+      "deep_minutes": 48,
+      "rem_minutes": 118,
+      "light_minutes": 277,
+      "awake_minutes": 17,
+      "spo2_avg": 97.2,
+      "spo2_min": 94.1,
+      "spo2_max": 99.8
+    },
+    {
+      "date": "2026-09-26",
+      "start_at": "2026-09-26T00:27:03+09:00",
+      "end_at": "2026-09-26T08:25:03+09:00",
+      "is_main": true,
+      "sleep_minutes": 453,
+      "deep_minutes": 66,
+      "rem_minutes": 126,
+      "light_minutes": 261,
+      "awake_minutes": 25,
+      "spo2_avg": 95.8,
+      "spo2_min": 95.6,
+      "spo2_max": 96.1
+    },
+    {
+      "date": "2026-09-27",
+      "start_at": "2026-09-27T00:07:53+09:00",
+      "end_at": "2026-09-27T07:36:53+09:00",
+      "is_main": true,
+      "sleep_minutes": 440,
+      "deep_minutes": 63,
+      "rem_minutes": 108,
+      "light_minutes": 269,
+      "awake_minutes": 9,
+      "spo2_avg": 96.4,
+      "spo2_min": 94.5,
+      "spo2_max": 98.8
+    },
+    {
+      "date": "2026-09-28",
+      "start_at": "2026-09-27T23:40:08+09:00",
+      "end_at": "2026-09-28T07:09:08+09:00",
+      "is_main": true,
+      "sleep_minutes": 424,
+      "deep_minutes": 58,
+      "rem_minutes": 113,
+      "light_minutes": 253,
+      "awake_minutes": 25,
+      "spo2_avg": 96.0,
+      "spo2_min": 93.3,
+      "spo2_max": 98.1
+    },
+    {
+      "date": "2026-09-29",
+      "start_at": "2026-09-28T23:40:25+09:00",
+      "end_at": "2026-09-29T06:46:25+09:00",
+      "is_main": true,
+      "sleep_minutes": 422,
+      "deep_minutes": 63,
+      "rem_minutes": 105,
+      "light_minutes": 254,
+      "awake_minutes": 4,
+      "spo2_avg": 95.8,
+      "spo2_min": 95.7,
+      "spo2_max": 95.9
+    },
+    {
+      "date": "2026-09-30",
+      "start_at": "2026-09-29T23:12:35+09:00",
+      "end_at": "2026-09-30T06:11:35+09:00",
+      "is_main": true,
+      "sleep_minutes": 403,
+      "deep_minutes": 61,
+      "rem_minutes": 105,
+      "light_minutes": 237,
+      "awake_minutes": 16,
+      "spo2_avg": 97.3,
+      "spo2_min": 96.7,
+      "spo2_max": 97.9
+    },
+    {
+      "date": "2026-10-01",
+      "start_at": "2026-09-30T23:28:29+09:00",
+      "end_at": "2026-10-01T07:04:29+09:00",
+      "is_main": true,
+      "sleep_minutes": 435,
+      "deep_minutes": 51,
+      "rem_minutes": 113,
+      "light_minutes": 271,
+      "awake_minutes": 21,
+      "spo2_avg": 96.1,
+      "spo2_min": 95.0,
+      "spo2_max": 96.9
+    },
+    {
+      "date": "2026-10-02",
+      "start_at": "2026-10-01T23:06:28+09:00",
+      "end_at": "2026-10-02T06:10:28+09:00",
+      "is_main": true,
+      "sleep_minutes": 405,
+      "deep_minutes": 42,
+      "rem_minutes": 97,
+      "light_minutes": 266,
+      "awake_minutes": 19,
+      "spo2_avg": 96.4,
+      "spo2_min": 95.3,
+      "spo2_max": 98.6
+    },
+    {
+      "date": "2026-10-03",
+      "start_at": "2026-10-03T00:14:48+09:00",
+      "end_at": "2026-10-03T07:45:48+09:00",
+      "is_main": true,
+      "sleep_minutes": 445,
+      "deep_minutes": 58,
+      "rem_minutes": 123,
+      "light_minutes": 264,
+      "awake_minutes": 6,
+      "spo2_avg": 96.1,
+      "spo2_min": 94.7,
+      "spo2_max": 98.1
+    },
+    {
+      "date": "2026-10-04",
+      "start_at": "2026-10-04T00:02:05+09:00",
+      "end_at": "2026-10-04T07:56:05+09:00",
+      "is_main": true,
+      "sleep_minutes": 459,
+      "deep_minutes": 57,
+      "rem_minutes": 134,
+      "light_minutes": 268,
+      "awake_minutes": 15,
+      "spo2_avg": 96.2,
+      "spo2_min": 96.1,
+      "spo2_max": 96.2
+    },
+    {
+      "date": "2026-10-05",
+      "start_at": "2026-10-04T23:33:18+09:00",
+      "end_at": "2026-10-05T06:35:18+09:00",
+      "is_main": true,
+      "sleep_minutes": 415,
+      "deep_minutes": 62,
+      "rem_minutes": 120,
+      "light_minutes": 233,
+      "awake_minutes": 7,
+      "spo2_avg": 96.1,
+      "spo2_min": 94.9,
+      "spo2_max": 97.2
+    },
+    {
+      "date": "2026-10-06",
+      "start_at": "2026-10-05T23:23:39+09:00",
+      "end_at": "2026-10-06T06:35:39+09:00",
+      "is_main": true,
+      "sleep_minutes": 413,
+      "deep_minutes": 66,
+      "rem_minutes": 88,
+      "light_minutes": 259,
+      "awake_minutes": 19,
+      "spo2_avg": 96.6,
+      "spo2_min": 95.3,
+      "spo2_max": 97.7
+    },
+    {
+      "date": "2026-10-07",
+      "start_at": "2026-10-06T23:55:00+09:00",
+      "end_at": "2026-10-07T06:26:00+09:00",
+      "is_main": true,
+      "sleep_minutes": 382,
+      "deep_minutes": 61,
+      "rem_minutes": 84,
+      "light_minutes": 237,
+      "awake_minutes": 9,
+      "spo2_avg": 96.9,
+      "spo2_min": 96.0,
+      "spo2_max": 98.3
+    },
+    {
+      "date": "2026-10-08",
+      "start_at": "2026-10-07T23:23:45+09:00",
+      "end_at": "2026-10-08T07:18:45+09:00",
+      "is_main": true,
+      "sleep_minutes": 448,
+      "deep_minutes": 57,
+      "rem_minutes": 111,
+      "light_minutes": 280,
+      "awake_minutes": 27,
+      "spo2_avg": 95.3,
+      "spo2_min": 95.1,
+      "spo2_max": 95.5
+    },
+    {
+      "date": "2026-10-09",
+      "start_at": "2026-10-08T22:52:01+09:00",
+      "end_at": "2026-10-09T06:15:01+09:00",
+      "is_main": true,
+      "sleep_minutes": 432,
+      "deep_minutes": 64,
+      "rem_minutes": 105,
+      "light_minutes": 263,
+      "awake_minutes": 11,
+      "spo2_avg": 94.8,
+      "spo2_min": 93.8,
+      "spo2_max": 95.9
+    },
+    {
+      "date": "2026-10-10",
+      "start_at": "2026-10-10T00:12:36+09:00",
+      "end_at": "2026-10-10T08:03:36+09:00",
+      "is_main": true,
+      "sleep_minutes": 456,
+      "deep_minutes": 56,
+      "rem_minutes": 126,
+      "light_minutes": 274,
+      "awake_minutes": 15,
+      "spo2_avg": 95.7,
+      "spo2_min": 95.1,
+      "spo2_max": 96.6
+    },
+    {
+      "date": "2026-10-11",
+      "start_at": "2026-10-11T00:08:31+09:00",
+      "end_at": "2026-10-11T08:08:31+09:00",
+      "is_main": true,
+      "sleep_minutes": 463,
+      "deep_minutes": 58,
+      "rem_minutes": 121,
+      "light_minutes": 284,
+      "awake_minutes": 17,
+      "spo2_avg": 95.6,
+      "spo2_min": 95.1,
+      "spo2_max": 96.1
+    },
+    {
+      "date": "2026-10-12",
+      "start_at": "2026-10-11T22:51:24+09:00",
+      "end_at": "2026-10-12T06:23:24+09:00",
+      "is_main": true,
+      "sleep_minutes": 438,
+      "deep_minutes": 63,
+      "rem_minutes": 120,
+      "light_minutes": 255,
+      "awake_minutes": 14,
+      "spo2_avg": 95.5,
+      "spo2_min": 93.7,
+      "spo2_max": 97.1
+    },
+    {
+      "date": "2026-10-13",
+      "start_at": "2026-10-12T23:22:00+09:00",
+      "end_at": "2026-10-13T06:47:00+09:00",
+      "is_main": true,
+      "sleep_minutes": 435,
+      "deep_minutes": 68,
+      "rem_minutes": 113,
+      "light_minutes": 254,
+      "awake_minutes": 10,
+      "spo2_avg": 95.6,
+      "spo2_min": 93.9,
+      "spo2_max": 96.7
+    },
+    {
+      "date": "2026-10-14",
+      "start_at": "2026-10-13T23:19:34+09:00",
+      "end_at": "2026-10-14T06:48:34+09:00",
+      "is_main": true,
+      "sleep_minutes": 434,
+      "deep_minutes": 73,
+      "rem_minutes": 120,
+      "light_minutes": 241,
+      "awake_minutes": 15,
+      "spo2_avg": 96.4,
+      "spo2_min": 94.4,
+      "spo2_max": 97.8
+    },
+    {
+      "date": "2026-10-15",
+      "start_at": "2026-10-14T23:20:00+09:00",
+      "end_at": "2026-10-15T07:08:00+09:00",
+      "is_main": true,
+      "sleep_minutes": 457,
+      "deep_minutes": 63,
+      "rem_minutes": 119,
+      "light_minutes": 275,
+      "awake_minutes": 11,
+      "spo2_avg": 95.3,
+      "spo2_min": 94.4,
+      "spo2_max": 96.5
+    },
+    {
+      "date": "2026-10-16",
+      "start_at": "2026-10-15T23:15:28+09:00",
+      "end_at": "2026-10-16T06:52:28+09:00",
+      "is_main": true,
+      "sleep_minutes": 441,
+      "deep_minutes": 53,
+      "rem_minutes": 124,
+      "light_minutes": 264,
+      "awake_minutes": 16,
+      "spo2_avg": 96.2,
+      "spo2_min": 94.8,
+      "spo2_max": 97.1
+    },
+    {
+      "date": "2026-10-17",
+      "start_at": "2026-10-16T23:57:46+09:00",
+      "end_at": "2026-10-17T07:24:46+09:00",
+      "is_main": true,
+      "sleep_minutes": 434,
+      "deep_minutes": 56,
+      "rem_minutes": 120,
+      "light_minutes": 258,
+      "awake_minutes": 13,
+      "spo2_avg": 95.6,
+      "spo2_min": 94.4,
+      "spo2_max": 96.5
+    },
+    {
+      "date": "2026-10-18",
+      "start_at": "2026-10-18T00:08:02+09:00",
+      "end_at": "2026-10-18T08:01:02+09:00",
+      "is_main": true,
+      "sleep_minutes": 455,
+      "deep_minutes": 64,
+      "rem_minutes": 132,
+      "light_minutes": 259,
+      "awake_minutes": 18,
+      "spo2_avg": 96.2,
+      "spo2_min": 95.4,
+      "spo2_max": 96.8
+    },
+    {
+      "date": "2026-10-19",
+      "start_at": "2026-10-18T23:56:03+09:00",
+      "end_at": "2026-10-19T06:16:03+09:00",
+      "is_main": true,
+      "sleep_minutes": 365,
+      "deep_minutes": 65,
+      "rem_minutes": 102,
+      "light_minutes": 198,
+      "awake_minutes": 15,
+      "spo2_avg": 96.3,
+      "spo2_min": 94.7,
+      "spo2_max": 98.2
+    },
+    {
+      "date": "2026-10-20",
+      "start_at": "2026-10-19T23:30:15+09:00",
+      "end_at": "2026-10-20T06:37:15+09:00",
+      "is_main": true,
+      "sleep_minutes": 418,
+      "deep_minutes": 68,
+      "rem_minutes": 93,
+      "light_minutes": 257,
+      "awake_minutes": 9,
+      "spo2_avg": 95.9,
+      "spo2_min": 94.4,
+      "spo2_max": 98.9
+    },
+    {
+      "date": "2026-10-21",
+      "start_at": "2026-10-20T22:38:43+09:00",
+      "end_at": "2026-10-21T05:56:43+09:00",
+      "is_main": true,
+      "sleep_minutes": 418,
+      "deep_minutes": 60,
+      "rem_minutes": 97,
+      "light_minutes": 261,
+      "awake_minutes": 20,
+      "spo2_avg": 97.5,
+      "spo2_min": 97.2,
+      "spo2_max": 97.8
+    },
+    {
+      "date": "2026-10-22",
+      "start_at": "2026-10-21T23:40:17+09:00",
+      "end_at": "2026-10-22T06:22:17+09:00",
+      "is_main": true,
+      "sleep_minutes": 390,
+      "deep_minutes": 40,
+      "rem_minutes": 89,
+      "light_minutes": 261,
+      "awake_minutes": 12,
+      "spo2_avg": 96.5,
+      "spo2_min": 96.1,
+      "spo2_max": 96.8
+    }
+  ],
+  "exercise": [
+    {
+      "date": "2026-09-18",
+      "start_at": "2026-09-18T08:17:00+09:00",
+      "end_at": "2026-09-18T08:33:00+09:00",
+      "duration_minutes": 16,
+      "exercise_type": 79,
+      "type_name": "걷기",
+      "category": "cardio",
+      "counts_as_exercise": false,
+      "title": null,
+      "calories_kcal": 45.7,
+      "distance_m": 857.4,
+      "avg_heart_rate": 90.8,
+      "max_heart_rate": 106,
+      "avg_speed_mps": 0.89
+    },
+    {
+      "date": "2026-09-21",
+      "start_at": "2026-09-21T08:10:00+09:00",
+      "end_at": "2026-09-21T08:25:00+09:00",
+      "duration_minutes": 15,
+      "exercise_type": 79,
+      "type_name": "걷기",
+      "category": "cardio",
+      "counts_as_exercise": false,
+      "title": null,
+      "calories_kcal": 40.9,
+      "distance_m": 760.2,
+      "avg_heart_rate": 90.3,
+      "max_heart_rate": 101,
+      "avg_speed_mps": 0.84
+    },
+    {
+      "date": "2026-09-22",
+      "start_at": "2026-09-22T08:04:00+09:00",
+      "end_at": "2026-09-22T08:19:00+09:00",
+      "duration_minutes": 15,
+      "exercise_type": 79,
+      "type_name": "걷기",
+      "category": "cardio",
+      "counts_as_exercise": false,
+      "title": null,
+      "calories_kcal": 46.8,
+      "distance_m": 827.8,
+      "avg_heart_rate": 90.1,
+      "max_heart_rate": 102,
+      "avg_speed_mps": 0.92
+    },
+    {
+      "date": "2026-09-24",
+      "start_at": "2026-09-24T08:01:00+09:00",
+      "end_at": "2026-09-24T08:16:00+09:00",
+      "duration_minutes": 15,
+      "exercise_type": 79,
+      "type_name": "걷기",
+      "category": "cardio",
+      "counts_as_exercise": false,
+      "title": null,
+      "calories_kcal": 47.2,
+      "distance_m": 803.5,
+      "avg_heart_rate": 91.0,
+      "max_heart_rate": 104,
+      "avg_speed_mps": 0.89
+    },
+    {
+      "date": "2026-09-25",
+      "start_at": "2026-09-25T08:10:00+09:00",
+      "end_at": "2026-09-25T08:25:00+09:00",
+      "duration_minutes": 15,
+      "exercise_type": 79,
+      "type_name": "걷기",
+      "category": "cardio",
+      "counts_as_exercise": false,
+      "title": null,
+      "calories_kcal": 44.7,
+      "distance_m": 809.5,
+      "avg_heart_rate": 90.8,
+      "max_heart_rate": 106,
+      "avg_speed_mps": 0.9
+    },
+    {
+      "date": "2026-09-28",
+      "start_at": "2026-09-28T07:48:00+09:00",
+      "end_at": "2026-09-28T08:03:00+09:00",
+      "duration_minutes": 15,
+      "exercise_type": 79,
+      "type_name": "걷기",
+      "category": "cardio",
+      "counts_as_exercise": false,
+      "title": null,
+      "calories_kcal": 47.2,
+      "distance_m": 801.1,
+      "avg_heart_rate": 91.3,
+      "max_heart_rate": 104,
+      "avg_speed_mps": 0.89
+    },
+    {
+      "date": "2026-09-29",
+      "start_at": "2026-09-29T08:16:00+09:00",
+      "end_at": "2026-09-29T08:30:00+09:00",
+      "duration_minutes": 14,
+      "exercise_type": 79,
+      "type_name": "걷기",
+      "category": "cardio",
+      "counts_as_exercise": false,
+      "title": null,
+      "calories_kcal": 39.8,
+      "distance_m": 742.5,
+      "avg_heart_rate": 90.6,
+      "max_heart_rate": 105,
+      "avg_speed_mps": 0.88
+    },
+    {
+      "date": "2026-09-30",
+      "start_at": "2026-09-30T08:11:00+09:00",
+      "end_at": "2026-09-30T08:24:00+09:00",
+      "duration_minutes": 13,
+      "exercise_type": 79,
+      "type_name": "걷기",
+      "category": "cardio",
+      "counts_as_exercise": false,
+      "title": null,
+      "calories_kcal": 38.0,
+      "distance_m": 707.8,
+      "avg_heart_rate": 91.1,
+      "max_heart_rate": 109,
+      "avg_speed_mps": 0.91
+    },
+    {
+      "date": "2026-10-01",
+      "start_at": "2026-10-01T08:07:00+09:00",
+      "end_at": "2026-10-01T08:21:00+09:00",
+      "duration_minutes": 14,
+      "exercise_type": 79,
+      "type_name": "걷기",
+      "category": "cardio",
+      "counts_as_exercise": false,
+      "title": null,
+      "calories_kcal": 41.5,
+      "distance_m": 755.4,
+      "avg_heart_rate": 91.6,
+      "max_heart_rate": 102,
+      "avg_speed_mps": 0.9
+    },
+    {
+      "date": "2026-10-02",
+      "start_at": "2026-10-02T07:56:00+09:00",
+      "end_at": "2026-10-02T08:09:00+09:00",
+      "duration_minutes": 13,
+      "exercise_type": 79,
+      "type_name": "걷기",
+      "category": "cardio",
+      "counts_as_exercise": false,
+      "title": null,
+      "calories_kcal": 36.3,
+      "distance_m": 682.2,
+      "avg_heart_rate": 91.0,
+      "max_heart_rate": 106,
+      "avg_speed_mps": 0.87
+    },
+    {
+      "date": "2026-10-05",
+      "start_at": "2026-10-05T08:09:00+09:00",
+      "end_at": "2026-10-05T08:23:00+09:00",
+      "duration_minutes": 14,
+      "exercise_type": 79,
+      "type_name": "걷기",
+      "category": "cardio",
+      "counts_as_exercise": false,
+      "title": null,
+      "calories_kcal": 41.6,
+      "distance_m": 732.1,
+      "avg_heart_rate": 90.4,
+      "max_heart_rate": 103,
+      "avg_speed_mps": 0.87
+    },
+    {
+      "date": "2026-10-06",
+      "start_at": "2026-10-06T08:01:00+09:00",
+      "end_at": "2026-10-06T08:13:00+09:00",
+      "duration_minutes": 12,
+      "exercise_type": 79,
+      "type_name": "걷기",
+      "category": "cardio",
+      "counts_as_exercise": false,
+      "title": null,
+      "calories_kcal": 33.1,
+      "distance_m": 653.8,
+      "avg_heart_rate": 91.1,
+      "max_heart_rate": 103,
+      "avg_speed_mps": 0.91
+    },
+    {
+      "date": "2026-10-07",
+      "start_at": "2026-10-07T08:37:00+09:00",
+      "end_at": "2026-10-07T08:50:00+09:00",
+      "duration_minutes": 13,
+      "exercise_type": 79,
+      "type_name": "걷기",
+      "category": "cardio",
+      "counts_as_exercise": false,
+      "title": null,
+      "calories_kcal": 41.7,
+      "distance_m": 671.3,
+      "avg_heart_rate": 90.5,
+      "max_heart_rate": 105,
+      "avg_speed_mps": 0.86
+    },
+    {
+      "date": "2026-10-08",
+      "start_at": "2026-10-08T08:19:00+09:00",
+      "end_at": "2026-10-08T08:34:00+09:00",
+      "duration_minutes": 15,
+      "exercise_type": 79,
+      "type_name": "걷기",
+      "category": "cardio",
+      "counts_as_exercise": false,
+      "title": null,
+      "calories_kcal": 48.5,
+      "distance_m": 832.0,
+      "avg_heart_rate": 91.5,
+      "max_heart_rate": 103,
+      "avg_speed_mps": 0.92
+    },
+    {
+      "date": "2026-10-09",
+      "start_at": "2026-10-09T08:22:00+09:00",
+      "end_at": "2026-10-09T08:36:00+09:00",
+      "duration_minutes": 14,
+      "exercise_type": 79,
+      "type_name": "걷기",
+      "category": "cardio",
+      "counts_as_exercise": false,
+      "title": null,
+      "calories_kcal": 42.4,
+      "distance_m": 749.9,
+      "avg_heart_rate": 91.8,
+      "max_heart_rate": 103,
+      "avg_speed_mps": 0.89
+    },
+    {
+      "date": "2026-10-12",
+      "start_at": "2026-10-12T08:19:00+09:00",
+      "end_at": "2026-10-12T08:32:00+09:00",
+      "duration_minutes": 13,
+      "exercise_type": 79,
+      "type_name": "걷기",
+      "category": "cardio",
+      "counts_as_exercise": false,
+      "title": null,
+      "calories_kcal": 42.1,
+      "distance_m": 671.4,
+      "avg_heart_rate": 90.6,
+      "max_heart_rate": 101,
+      "avg_speed_mps": 0.86
+    },
+    {
+      "date": "2026-10-13",
+      "start_at": "2026-10-13T08:03:00+09:00",
+      "end_at": "2026-10-13T08:19:00+09:00",
+      "duration_minutes": 16,
+      "exercise_type": 79,
+      "type_name": "걷기",
+      "category": "cardio",
+      "counts_as_exercise": false,
+      "title": null,
+      "calories_kcal": 52.7,
+      "distance_m": 846.3,
+      "avg_heart_rate": 91.2,
+      "max_heart_rate": 104,
+      "avg_speed_mps": 0.88
+    },
+    {
+      "date": "2026-10-14",
+      "start_at": "2026-10-14T08:33:00+09:00",
+      "end_at": "2026-10-14T08:45:00+09:00",
+      "duration_minutes": 12,
+      "exercise_type": 79,
+      "type_name": "걷기",
+      "category": "cardio",
+      "counts_as_exercise": false,
+      "title": null,
+      "calories_kcal": 32.8,
+      "distance_m": 643.7,
+      "avg_heart_rate": 89.7,
+      "max_heart_rate": 103,
+      "avg_speed_mps": 0.89
+    },
+    {
+      "date": "2026-10-15",
+      "start_at": "2026-10-15T08:04:00+09:00",
+      "end_at": "2026-10-15T08:16:00+09:00",
+      "duration_minutes": 12,
+      "exercise_type": 79,
+      "type_name": "걷기",
+      "category": "cardio",
+      "counts_as_exercise": false,
+      "title": null,
+      "calories_kcal": 38.9,
+      "distance_m": 654.7,
+      "avg_heart_rate": 91.4,
+      "max_heart_rate": 102,
+      "avg_speed_mps": 0.91
+    },
+    {
+      "date": "2026-10-19",
+      "start_at": "2026-10-19T08:08:00+09:00",
+      "end_at": "2026-10-19T08:21:00+09:00",
+      "duration_minutes": 13,
+      "exercise_type": 79,
+      "type_name": "걷기",
+      "category": "cardio",
+      "counts_as_exercise": false,
+      "title": null,
+      "calories_kcal": 37.4,
+      "distance_m": 711.8,
+      "avg_heart_rate": 90.3,
+      "max_heart_rate": 103,
+      "avg_speed_mps": 0.91
+    },
+    {
+      "date": "2026-10-22",
+      "start_at": "2026-10-22T08:00:00+09:00",
+      "end_at": "2026-10-22T08:15:00+09:00",
+      "duration_minutes": 15,
+      "exercise_type": 79,
+      "type_name": "걷기",
+      "category": "cardio",
+      "counts_as_exercise": false,
+      "title": null,
+      "calories_kcal": 47.5,
+      "distance_m": 799.4,
+      "avg_heart_rate": 90.5,
+      "max_heart_rate": 106,
+      "avg_speed_mps": 0.89
+    }
+  ],
+  "sync": {
+    "steps": {
+      "last_data_at": "2026-10-22T20:47:13+09:00",
+      "last_status": "success",
+      "last_success_at": "2026-10-22T21:00:00+09:00"
+    },
+    "heart_rates": {
+      "last_data_at": "2026-10-22T20:34:21+09:00",
+      "last_status": "success",
+      "last_success_at": "2026-10-22T21:00:00+09:00"
+    },
+    "oxygen_saturations": {
+      "last_data_at": "2026-10-22T05:36:06+09:00",
+      "last_status": "success",
+      "last_success_at": "2026-10-22T21:00:00+09:00"
+    },
+    "sleeps": {
+      "last_data_at": "2026-10-22T06:22:17+09:00",
+      "last_status": "success",
+      "last_success_at": "2026-10-22T21:00:00+09:00"
+    },
+    "exercise_sessions": {
+      "last_data_at": "2026-10-22T08:15:00+09:00",
+      "last_status": "success",
+      "last_success_at": "2026-10-22T21:00:00+09:00"
+    }
+  },
+  "data_sha256": "22029cca78a2cedf614f0cc763552a721ce27572646a080e51c744c45e0c3618"
+}

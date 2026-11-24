@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Health Connect 공통 -->
+    <!-- 인터넷 연결이 끊겼는지 읽어 화면에 안내한다(Connectivity.kt). 사용자에게 묻지 않는 일반 권한 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.health.READ_HEALTH_DATA_IN_BACKGROUND" />
+    <uses-permission android:name="android.permission.health.READ_HEALTH_DATA_HISTORY" />
+
+    <!-- 수집할 데이터 타입 -->
+    <uses-permission android:name="android.permission.health.READ_STEPS" />
+    <uses-permission android:name="android.permission.health.READ_HEART_RATE" />
+    <uses-permission android:name="android.permission.health.READ_OXYGEN_SATURATION" />
+    <uses-permission android:name="android.permission.health.READ_SLEEP" />
+
+    <!-- 실데이터 모드(candiy.mockData=false) — 워치 산책 기록. MainActivity 의 walkTypes 와 짝 -->
+    <uses-permission android:name="android.permission.health.READ_EXERCISE" />
+    <uses-permission android:name="android.permission.health.READ_DISTANCE" />
+    <uses-permission android:name="android.permission.health.READ_TOTAL_CALORIES_BURNED" />
+
+    <!-- CANDiY 서버가 받는 나머지 6종 (13종 전부) -->
+    <uses-permission android:name="android.permission.health.READ_SPEED" />
+    <uses-permission android:name="android.permission.health.READ_VO2_MAX" />
+    <uses-permission android:name="android.permission.health.READ_WEIGHT" />
+    <uses-permission android:name="android.permission.health.READ_BODY_FAT" />
+    <uses-permission android:name="android.permission.health.READ_BASAL_METABOLIC_RATE" />
+    <uses-permission android:name="android.permission.health.READ_HEIGHT" />
+
+    <!-- 걸음·심박은 워치 15분 수집분을 쓸 때(WatchWalkReceiver)도 쓴다.
+         산소포화도·수면은 연동 테스트 모드(candiy.mockData=true, 디버그 빌드만)에서 목업 데이터를 쓸 때만 요청한다 -->
+    <uses-permission android:name="android.permission.health.WRITE_STEPS" />
+    <uses-permission android:name="android.permission.health.WRITE_HEART_RATE" />
+    <uses-permission android:name="android.permission.health.WRITE_OXYGEN_SATURATION" />
+    <uses-permission android:name="android.permission.health.WRITE_SLEEP" />
+
+    <!-- 워치 직접 수집 실험 — 워치 앱(Health Services)이 보낸 걷기 기록을 Health Connect 에 쓴다 -->
+    <uses-permission android:name="android.permission.health.WRITE_EXERCISE" />
+    <uses-permission android:name="android.permission.health.WRITE_DISTANCE" />
+    <uses-permission android:name="android.permission.health.WRITE_TOTAL_CALORIES_BURNED" />
+
+    <!-- 키·몸무게 직접 입력분을 Health Connect 에 쓴다 -->
+    <uses-permission android:name="android.permission.health.WRITE_HEIGHT" />
+    <uses-permission android:name="android.permission.health.WRITE_WEIGHT" />
+
+    <!-- 동기화 스케줄 등록 -->
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" android:minSdkVersion="33" />
+
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CandiyQuickstart">
+        <!-- 화면 회전·다크 모드·글자 크기가 바뀌어도 화면을 새로 만들지 않는다. 새로 만들면 로그인·가입 중이던
+             상태(가입 자격, 입력값)가 사라진다. 화면은 Compose 가 바뀐 설정에 맞춰 다시 그린다 -->
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize|uiMode|density|fontScale|keyboardHidden"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- 권한 근거 화면 — Android 13 이하 -->
+            <intent-filter>
+                <action android:name="androidx.health.ACTION_SHOW_PERMISSIONS_RATIONALE" />
+            </intent-filter>
+
+            <!-- 권한 근거 화면 — Android 14 이상 -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW_PERMISSION_USAGE" />
+                <category android:name="android.intent.category.HEALTH_PERMISSIONS" />
+            </intent-filter>
+        </activity>
+
+        <!-- 카카오톡이 없을 때 카카오 계정 로그인(브라우저)에서 앱으로 돌아오는 화면. 주소는 kakao{네이티브 앱 키}://oauth -->
+        <activity
+            android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:host="oauth"
+                    android:scheme="${kakaoScheme}" />
+            </intent-filter>
+        </activity>
+
+        <!-- 워치 앱이 올린 DataItem(/candiy/walk/...)을 받는다 -->
+        <service
+            android:name=".WatchWalkReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.DATA_CHANGED" />
+                <data
+                    android:host="*"
+                    android:pathPrefix="/candiy/walk/"
+                    android:scheme="wear" />
+            </intent-filter>
+            <!-- 예전 워치 빌드의 15분 자동 수집분 (답 없는 블루투스 메시지) -->
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.MESSAGE_RECEIVED" />
+                <data
+                    android:host="*"
+                    android:path="/candiy/passive"
+                    android:scheme="wear" />
+            </intent-filter>
+            <!-- 워치 15분 자동 수집분 (요청·응답: Health Connect 에 저장한 뒤 답해야 워치가 지운다) -->
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.REQUEST_RECEIVED" />
+                <data
+                    android:host="*"
+                    android:path="/candiy/passive/batch"
+                    android:scheme="wear" />
+            </intent-filter>
+            <!-- 워치 화면이 열릴 때 묻는 네 지표 전송 상태 (블루투스 메시지) -->
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.MESSAGE_RECEIVED" />
+                <data
+                    android:host="*"
+                    android:path="/candiy/status/request"
+                    android:scheme="wear" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

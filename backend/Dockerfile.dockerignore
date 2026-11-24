@@ -1,0 +1,15 @@
+# backend/Dockerfile 전용. 저장소 루트가 컨텍스트라 필요한 것만 넣는다 (.env·건강데이터·테스트가 이미지에 들어가지 않게)
+*
+!ai/pyproject.toml
+!ai/README.md
+!ai/src
+!data/pipeline/pyproject.toml
+!data/pipeline/README.md
+!data/pipeline/src
+!backend/pyproject.toml
+!backend/uv.lock
+!backend/README.md
+!backend/alembic.ini
+!backend/alembic
+!backend/app
+**/__pycache__

@@ -1,0 +1,66 @@
+# ===== 환경 변수·비밀값 =====
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.jks
+*.keystore
+
+# ===== 건강데이터 (실데이터는 저장소에 올리지 않음) =====
+data/**/raw/
+data/**/dumps/
+data/**/exports/
+
+# ===== OS·에디터 =====
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.iml
+*.swp
+
+# ===== Python (backend, ai, data) =====
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+ai/bench/results/
+ai/eval/results/
+
+# ===== Node·SvelteKit (frontend) =====
+node_modules/
+.svelte-kit/
+frontend/web/build/
+frontend/web/dist/
+playwright-report/
+test-results/
+npm-debug.log*
+pnpm-debug.log*
+
+# ===== Android =====
+.gradle/
+.kotlin/
+frontend/app/**/build/
+frontend/app/build/
+local.properties
+captures/
+*.apk
+*.aab
+# CANDiY HC SDK: 사각 사내 코드라 저장소에 절대 올리지 않는다. SDK 폴더·zip은 개발자 PC에만 둔다 (frontend/app/README.md)
+candiyHC*
+
+# ===== 로그 =====
+logs/
+*.log
+
+# 백엔드 에이전트 지침
+/backend/AGENTS.md
+/backend/local/

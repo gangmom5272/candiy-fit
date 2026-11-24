@@ -1,0 +1,13 @@
+# infra/nginx/Dockerfile 전용. 저장소 루트가 컨텍스트라 필요한 것만 넣는다 (.env·건강데이터·사각 SDK가 이미지에 들어가지 않게)
+*
+!frontend/web
+frontend/web/node_modules
+frontend/web/.certs
+frontend/web/build
+frontend/web/.svelte-kit
+frontend/web/test-results
+frontend/web/playwright-report
+frontend/web/storybook-static
+# 로컬 웹 .env는 넣지 않는다. 공개값은 build args로만 받는다
+frontend/web/.env*
+!infra/nginx/templates

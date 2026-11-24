@@ -1,0 +1,65 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Guidelines/Component 규칙" />
+
+# Component 규칙
+
+CANDiY-FiT Web의 공통 UI 기준을 한곳에서 보기 위한 페이지다. 원문은 `docs/design-system.md`이며, 규칙이 바뀌면 원문을 먼저 고친다.
+
+## 어디에 만드나
+
+{/* Storybook MDX는 마크다운 표(GFM)를 지원하지 않아 JSX 표로 작성한다 */}
+
+<table>
+	<thead>
+		<tr>
+			<th>구분</th>
+			<th>위치</th>
+			<th>예시</th>
+			<th>판단 기준</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>공통 UI</td>
+			<td>
+				<code>src/lib/components</code>
+			</td>
+			<td>Button, Input, Modal, Card, LoadingState, EmptyState, ErrorState</td>
+			<td>여러 feature에서 같은 책임으로 쓰이고, domain 지식 없이 의미가 있다</td>
+		</tr>
+		<tr>
+			<td>feature UI</td>
+			<td>
+				<code>{'src/lib/features/<feature>/components'}</code>
+			</td>
+			<td>HealthTabs, SleepStageChart, CoachingEvidenceCard</td>
+			<td>특정 domain 데이터나 규칙을 알아야 한다</td>
+		</tr>
+	</tbody>
+</table>
+
+- 두 번 쓰였다는 이유만으로 공통으로 옮기지 않는다. 앞으로 재사용할 수도 있다는 이유로 미리 만들지 않는다.
+- 공통 컴포넌트에는 API 호출이나 feature 비즈니스 로직을 넣지 않는다. 필요한 값은 props로 받는다.
+
+## 새로 만들기 전에
+
+1. `src/lib/components`의 기존 구현을 확인한다.
+2. 현재 feature의 `components`를 확인한다.
+3. 기존 컴포넌트가 요구사항을 만족하는지 본다.
+4. 작은 확장으로 재사용할 수 있으면 재사용한다.
+5. 역할이 명확히 다를 때만 새로 만든다.
+
+## 스타일
+
+- 색은 `Foundations/Design Tokens`의 Colors 섹션에 있는 토큰 class를 쓴다. HEX를 직접 쓰지 않는다.
+- 글자 · radius · shadow는 같은 문서의 Typography · Radius & Shadow 섹션을 따른다.
+- Focus 관리 · 키보드 조작이 필요한 Modal, Select, Tabs 등은 Bits UI 같은 headless primitive를 검토한다(도입 확정 아님).
+
+## Story 작성
+
+- 공통 컴포넌트, 또는 상태가 여러 개인 재사용 컴포넌트를 만들 때 Story를 함께 작성한다.
+- Story 파일은 컴포넌트 옆에 `컴포넌트이름.stories.svelte`로 둔다.
+- 실제로 존재하는 상태만 보여 준다. Storybook을 위해 없는 상태를 만들지 않는다.
+- 데이터는 가짜 값만 쓴다. 실제 건강데이터를 넣지 않는다.
+- 접근성 패널(Accessibility)의 위반 항목을 확인한다.

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        Android 12+ 시작 화면. 시스템이 그리는 화면이라 라이브러리(core-splashscreen) 없이 테마 값만 둔다.
+        흰 바탕에 런처 아이콘과 같은 사탕을 아이콘과 같은 연분홍(#FFF4F3) 원 위에 띄운다.
+        런처 아이콘 → 시작 화면 → 홈 왼쪽 위 마크까지 사탕 바탕색이 바뀌지 않게 같은 색을 쓴다.
+    -->
+    <style name="Theme.CandiyQuickstart" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:statusBarColor">@android:color/white</item>
+        <item name="android:navigationBarColor">@android:color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:windowSplashScreenBackground">@android:color/white</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <item name="android:windowSplashScreenIconBackgroundColor">#FFF4F3</item>
+    </style>
+</resources>

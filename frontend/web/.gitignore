@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+
+# Output
+.output/
+.vercel/
+.netlify/
+.wrangler/
+/.svelte-kit/
+/build/
+/dist/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.certs/
+.env
+.env.*
+!.env.example
+
+# Vite
+/.vite/
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# Test reports
+/coverage/
+playwright-report/
+test-results/
+
+# Package manager logs
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+*storybook.log
+storybook-static

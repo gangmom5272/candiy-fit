@@ -1,0 +1,121 @@
+[project]
+name = "candiy-fit-backend"
+version = "0.1.0"
+description = "캔디핏 백엔드 API"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "alembic>=1.14.0",
+    "asyncpg>=0.32.0",
+    "candiy-pipeline",
+    "coach-ai",
+    "fastapi>=0.143.2",
+    "gunicorn>=23.0.0",
+    "pydantic>=2.14.1",
+    "pydantic-settings>=2.16.0",
+    "sqlalchemy[asyncio]>=2.1.4",
+    "uvicorn[standard]>=0.54.0",
+    "uvicorn-worker>=0.3.0",
+    "pyjwt[crypto]>=2.10.1,<3",
+    "httpx>=0.28.1",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+    "ruff>=0.17.1",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+coach-ai = { path = "../ai", editable = true }
+candiy-pipeline = { path = "../data/pipeline", editable = true }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+asyncio_mode = "auto"
+markers = ["db: 로컬 PostgreSQL이 필요한 테스트"]
+addopts = "-m 'not db'"
+
+# =====================================================================
+# Ruff 전역 설정
+# =====================================================================
+[tool.ruff]
+line-length = 88                 # Black 기본값 88자
+target-version = "py311"          # 기존 프로젝트 파이썬 버전(3.11) 유지
+extend-exclude = [
+    "alembic/versions/*",         # Alembic 자동 생성 마이그레이션 파일은 검사 제외
+]
+
+# =====================================================================
+# A. Ruff 포맷팅 설정 (Black / PEP 8 표준 적용)
+# =====================================================================
+[tool.ruff.format]
+quote-style = "double"            # 큰따옴표(")로 통일
+indent-style = "space"            # 공백 4칸 들여쓰기
+skip-magic-trailing-comma = false # 마지막 요소 뒤 쉼표(,)가 있으면 여러 줄로 펼침
+line-ending = "auto"
+docstring-code-format = true      # 주석(Docstring) 내부 예시 코드도 자동 정렬
+
+# =====================================================================
+# B. Ruff 린팅 설정 (비동기 WebSocket, 건강 데이터 시간대, 보안 규칙 통합)
+# =====================================================================
+[tool.ruff.lint]
+select = [
+    # --- 기본 문법 및 코드 정리 ---
+    "E",       # pycodestyle 에러 (PEP 8)
+    "W",       # pycodestyle 경고 (PEP 8)
+    "F",       # Pyflakes (미사용 변수/임포트, 오타 감지)
+    "I",       # isort (임포트 순서 자동 정렬)
+    "B",       # flake8-bugbear (잠재적 버그 패턴 감지)
+    "UP",      # pyupgrade (최신 파이썬 문법 강제)
+    "SIM",     # flake8-simplify (복잡한 조건문/루프 단순화)
+
+    # --- 프로젝트 특화 핵심 규칙 (비동기 & 건강 데이터 & FastAPI) ---
+    "ASYNC",   # 비동기 함수 내 동기 HTTP/파일/sleep 호출로 서버가 멈추는 실수 방지
+    "DTZ",     # 건강 데이터 조회 및 토큰 만료 계산 시 시간대(UTC/KST) 없는 datetime 방지
+    "FAST003", # FastAPI 경로 매개변수가 함수 인자에서 빠지는 실수 방지
+
+    # --- 보안 (인증, 토큰, 외부 API 연동 안전성) ---
+    "S105",    # 비밀번호/토큰 하드코딩 의심 패턴 감지 (변수 할당)
+    "S106",    # 비밀번호/토큰 하드코딩 의심 패턴 감지 (함수 인자)
+    "S107",    # 비밀번호/토큰 하드코딩 의심 패턴 감지 (기본값)
+    "S311",    # 보안용 토큰/난수 생성에 예측 가능한 일반 random 사용 금지 (secrets 권장)
+    "S324",    # 취약한 해시 알고리즘(MD5, SHA-1) 사용 금지
+    "S501",    # 외부 API 통신 시 verify=False로 SSL 인증서 검증을 끄는 실수 방지
+    "S608",    # 원시 SQL 문자열 조합으로 인한 SQL Injection 위험 감지
+
+    # --- 운영 로그 및 주석 관리 ---
+    "T20",     # 서버 코드 내 디버깅용 print / pprint(T201, T203) 방치 예방
+    "PGH004",  # 규칙 번호를 적지 않은 무분별한 '# noqa' 주석 방지
+    "RUF",     # 백그라운드 비동기 태스크 증발 방지(RUF006) 및 불필요한 noqa 감지(RUF100)
+]
+ignore = [
+    "E501",    # 줄 길이 초과 경고 끄기 (코드 줄바꿈은 포매터에 맡기고, 긴 프롬프트 문자열은 허용)
+]
+
+# 폴더별 예외 기준 적용
+[tool.ruff.lint.per-file-ignores]
+# 테스트 코드에서는 테스트용 가짜 비밀번호 하드코딩(S105~107) 및 더미 데이터용 일반 난수(S311) 허용
+"tests/**/*.py" = ["S105", "S106", "S107", "S311"]
+# 별도 CLI나 관리 스크립트에서는 정상 출력을 위한 print(T20) 허용
+"scripts/**/*.py" = ["T20"]
+
+# FastAPI 의존성 주입 함수를 인자 기본값으로 쓸 때 B008 경고가 뜨지 않도록 예외 등록
+[tool.ruff.lint.flake8-bugbear]
+extend-immutable-calls = [
+    "fastapi.Depends",
+    "fastapi.Query",
+    "fastapi.Path",
+    "fastapi.Body",
+    "fastapi.Header",
+    "fastapi.Cookie",
+]
+
+# import 정렬 시 로컬 프로젝트 패키지(app 및 연결된 coach-ai)를 최하단 로컬 그룹으로 분류
+[tool.ruff.lint.isort]
+known-first-party = ["app", "coach_ai"]

@@ -1,0 +1,10 @@
+version: 1
+name: candiy-sync
+slug: candiy-sync
+protocol: http
+port: 40123
+interceptRequests: true
+scenarios:
+  - name: default
+    path: ./default.js
+    default: true

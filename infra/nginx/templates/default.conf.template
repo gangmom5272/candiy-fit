@@ -1,0 +1,84 @@
+# 개발 서버 앞단 (S15P31A403-98). 밖으로 열리는 문은 이 nginx의 80/443뿐이다.
+#   /api/, /healthz → backend:8000 (compose 내부 네트워크)
+#   /               → 웹 정적 파일 (SvelteKit adapter-static SPA, S15P31A403-99). 이미지 빌드 때 넣는다 (infra/nginx/Dockerfile)
+# ${NGINX_SERVER_NAME}는 컨테이너 시작 때 환경 변수로 채워진다 (nginx 공식 이미지 templates 기능).
+# 인증서: /etc/letsencrypt (certbot 컨테이너가 발급·갱신, infra/README.md "HTTPS 인증서")
+
+# 접근 로그: 주소(경로·쿼리)를 남기지 않는다. 회원 ID·기간이 들어간다 (infra/data-export-checklist.md 2-2)
+log_format safe '$time_iso8601 $request_method $status $request_time $upstream_response_time rid=$request_id';
+
+# WebSocket(코칭 대화)을 위해 Upgrade 헤더를 넘긴다
+map $http_upgrade $connection_upgrade {
+    default upgrade;
+    ''      close;
+}
+
+server {
+    listen 80;
+    server_name ${NGINX_SERVER_NAME};
+    server_tokens off;
+    access_log /var/log/nginx/access.log safe;
+
+    # Let's Encrypt 인증서 발급·갱신 확인용
+    location /.well-known/acme-challenge/ {
+        root /var/www/certbot;
+    }
+
+    location / {
+        return 301 https://$host$request_uri;
+    }
+}
+
+server {
+    listen 443 ssl;
+    http2 on;
+    server_name ${NGINX_SERVER_NAME};
+    server_tokens off;
+    access_log /var/log/nginx/access.log safe;
+
+    ssl_certificate     /etc/letsencrypt/live/${NGINX_SERVER_NAME}/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/${NGINX_SERVER_NAME}/privkey.pem;
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_session_cache shared:SSL:10m;
+
+    add_header Strict-Transport-Security "max-age=31536000" always;
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+
+    # API는 JSON만 주고받는다. 파일 업로드가 생기면 늘린다
+    client_max_body_size 1m;
+
+    location /api/ {
+        proxy_pass http://backend:8000;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection $connection_upgrade;
+        # 코칭 응답(LLM)과 WebSocket이 오래 걸릴 수 있다
+        proxy_read_timeout 300s;
+    }
+
+    location = /healthz {
+        proxy_pass http://backend:8000;
+        proxy_set_header Host $host;
+    }
+
+    # 웹 (SPA). 파일이 없는 경로(/home, /coaching/아이디 등)는 index.html이 받아 새로고침해도 앱이 뜬다
+    root /usr/share/nginx/html;
+
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    # index.html은 매번 새로 받게 한다 (배포 후 새 화면을 바로 보도록)
+    location = /index.html {
+        expires -1;
+    }
+
+    # 빌드 때 이름에 해시가 붙는 파일은 내용이 바뀌면 이름도 바뀐다. 오래 캐시해도 된다
+    location /_app/immutable/ {
+        expires 1y;
+    }
+}

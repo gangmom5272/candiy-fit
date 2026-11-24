@@ -1,0 +1,47 @@
+{
+  "rules": [
+    "개선용과 확인용은 파일로 나뉜다. 확인용 파일은 이름 끝이 _holdout 이고, 문항마다 개선용 문항과 뜻이 같은 다른 말투 질문 하나이며 pair 가 짝인 개선용 문항 id 다.",
+    "등록할 때 두 파일의 sha256 과 문항 id 를 적는다. 파일이 바뀌면 실행하지 않고 멈추며, 다시 등록해야 한다.",
+    "개선 작업은 개선용 문항만 재고 실패만 읽는다. 확인용 문항은 마일스톤 측정에서만 실행하고 결과는 수와 판정만 쓴다."
+  ],
+  "sets": {
+    "v1": {
+      "dev": {
+        "path": "eval/datasets/golden/sleep_coaching_golden_v1.jsonl",
+        "sha256": "3ee790eb6e292273511b6ea2fb9e4f91520110019af840c440241a29bd9d29a8",
+        "ids": [
+          "sleep1-01",
+          "sleep1-02",
+          "sleep1-03",
+          "sleep1-04",
+          "sleep1-05",
+          "sleep1-06",
+          "sleep1-07",
+          "sleep1-08",
+          "sleep1-09",
+          "sleep1-10",
+          "sleep1-11",
+          "sleep1-12"
+        ]
+      },
+      "holdout": {
+        "path": "eval/datasets/golden/sleep_coaching_golden_v1_holdout.jsonl",
+        "sha256": "63cb9b848232a81a5a66d6efb49017fe6b7d6f1c272f7115ab97832c7a83ad26",
+        "ids": [
+          "sleep1-01h",
+          "sleep1-02h",
+          "sleep1-03h",
+          "sleep1-04h",
+          "sleep1-05h",
+          "sleep1-06h",
+          "sleep1-07h",
+          "sleep1-08h",
+          "sleep1-09h",
+          "sleep1-10h",
+          "sleep1-11h",
+          "sleep1-12h"
+        ]
+      }
+    }
+  }
+}

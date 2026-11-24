@@ -1,0 +1,1189 @@
+{
+  "persona": "synth-09",
+  "now": "2026-10-22T21:00:00+09:00",
+  "results": {
+    "sleeps/2026-09-23/2026-10-22": {
+      "metric": "sleeps",
+      "period": {
+        "start": "2026-09-23",
+        "end": "2026-10-22"
+      },
+      "unit": "min",
+      "summary": {
+        "avg": 417.82,
+        "daily_min": {
+          "date": "2026-10-20",
+          "value": 380
+        },
+        "daily_max": {
+          "date": "2026-10-04",
+          "value": 463
+        },
+        "total": null,
+        "days_with_data": 17,
+        "days_used_for_summary": 17,
+        "completed_days": 30,
+        "missing_days": [
+          "2026-09-26",
+          "2026-09-27",
+          "2026-09-29",
+          "2026-09-30",
+          "2026-10-02",
+          "2026-10-03",
+          "2026-10-11",
+          "2026-10-12",
+          "2026-10-13",
+          "2026-10-17",
+          "2026-10-18"
+        ],
+        "unsynced_days": [
+          "2026-10-21",
+          "2026-10-22"
+        ],
+        "linked_from": "2026-09-18"
+      },
+      "days": [
+        {
+          "date": "2026-09-23",
+          "value": 397,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-09-24",
+          "value": 400,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-09-25",
+          "value": 437,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-09-26",
+          "value": null,
+          "missing": true,
+          "reason": "NO_RECORD",
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-09-27",
+          "value": null,
+          "missing": true,
+          "reason": "NO_RECORD",
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-09-28",
+          "value": 402,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-09-29",
+          "value": null,
+          "missing": true,
+          "reason": "NO_RECORD",
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-09-30",
+          "value": null,
+          "missing": true,
+          "reason": "NO_RECORD",
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-01",
+          "value": 435,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-02",
+          "value": null,
+          "missing": true,
+          "reason": "NO_RECORD",
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-03",
+          "value": null,
+          "missing": true,
+          "reason": "NO_RECORD",
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-04",
+          "value": 463,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-05",
+          "value": 423,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-06",
+          "value": 409,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-07",
+          "value": 412,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-08",
+          "value": 432,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-09",
+          "value": 459,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-10",
+          "value": 452,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-11",
+          "value": null,
+          "missing": true,
+          "reason": "NO_RECORD",
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-12",
+          "value": null,
+          "missing": true,
+          "reason": "NO_RECORD",
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-13",
+          "value": null,
+          "missing": true,
+          "reason": "NO_RECORD",
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-14",
+          "value": 392,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-15",
+          "value": 394,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-16",
+          "value": 435,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-17",
+          "value": null,
+          "missing": true,
+          "reason": "NO_RECORD",
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-18",
+          "value": null,
+          "missing": true,
+          "reason": "NO_RECORD",
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-19",
+          "value": 381,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-20",
+          "value": 380,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-21",
+          "value": null,
+          "missing": true,
+          "reason": "UNSYNCED",
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-22",
+          "value": null,
+          "missing": true,
+          "reason": "UNSYNCED",
+          "is_in_progress": false
+        }
+      ],
+      "in_progress": null,
+      "data_status": {
+        "last_data_at": "2026-10-19T20:58:12Z",
+        "synced_until": "2026-10-20T14:30:16Z",
+        "last_sync_status": "success",
+        "last_success_at": "2026-10-22T12:00:00Z",
+        "checked_at": "2026-10-22T12:00:00Z"
+      },
+      "detail": {
+        "measured_min": null,
+        "measured_max": null,
+        "nights": [
+          {
+            "date": "2026-09-23",
+            "start_at": "2026-09-22T14:36:37Z",
+            "end_at": "2026-09-22T21:22:37Z",
+            "sleep_minutes": 397,
+            "deep_minutes": 63,
+            "rem_minutes": 97,
+            "light_minutes": 237,
+            "awake_minutes": 9
+          },
+          {
+            "date": "2026-09-24",
+            "start_at": "2026-09-23T14:21:30Z",
+            "end_at": "2026-09-23T21:22:30Z",
+            "sleep_minutes": 400,
+            "deep_minutes": 66,
+            "rem_minutes": 87,
+            "light_minutes": 247,
+            "awake_minutes": 21
+          },
+          {
+            "date": "2026-09-25",
+            "start_at": "2026-09-24T14:19:52Z",
+            "end_at": "2026-09-24T21:54:52Z",
+            "sleep_minutes": 437,
+            "deep_minutes": 58,
+            "rem_minutes": 124,
+            "light_minutes": 255,
+            "awake_minutes": 18
+          },
+          {
+            "date": "2026-09-28",
+            "start_at": "2026-09-27T14:05:26Z",
+            "end_at": "2026-09-27T21:13:26Z",
+            "sleep_minutes": 402,
+            "deep_minutes": 50,
+            "rem_minutes": 87,
+            "light_minutes": 265,
+            "awake_minutes": 26
+          },
+          {
+            "date": "2026-10-01",
+            "start_at": "2026-09-30T14:26:19Z",
+            "end_at": "2026-09-30T22:01:19Z",
+            "sleep_minutes": 435,
+            "deep_minutes": 59,
+            "rem_minutes": 119,
+            "light_minutes": 257,
+            "awake_minutes": 20
+          },
+          {
+            "date": "2026-10-04",
+            "start_at": "2026-10-03T15:07:10Z",
+            "end_at": "2026-10-03T23:10:10Z",
+            "sleep_minutes": 463,
+            "deep_minutes": 58,
+            "rem_minutes": 138,
+            "light_minutes": 267,
+            "awake_minutes": 20
+          },
+          {
+            "date": "2026-10-05",
+            "start_at": "2026-10-04T15:13:35Z",
+            "end_at": "2026-10-04T22:23:35Z",
+            "sleep_minutes": 423,
+            "deep_minutes": 58,
+            "rem_minutes": 97,
+            "light_minutes": 268,
+            "awake_minutes": 7
+          },
+          {
+            "date": "2026-10-06",
+            "start_at": "2026-10-05T14:30:06Z",
+            "end_at": "2026-10-05T21:41:06Z",
+            "sleep_minutes": 409,
+            "deep_minutes": 49,
+            "rem_minutes": 102,
+            "light_minutes": 258,
+            "awake_minutes": 22
+          },
+          {
+            "date": "2026-10-07",
+            "start_at": "2026-10-06T14:10:32Z",
+            "end_at": "2026-10-06T21:16:32Z",
+            "sleep_minutes": 412,
+            "deep_minutes": 58,
+            "rem_minutes": 112,
+            "light_minutes": 242,
+            "awake_minutes": 14
+          },
+          {
+            "date": "2026-10-08",
+            "start_at": "2026-10-07T14:14:44Z",
+            "end_at": "2026-10-07T21:32:44Z",
+            "sleep_minutes": 432,
+            "deep_minutes": 65,
+            "rem_minutes": 120,
+            "light_minutes": 247,
+            "awake_minutes": 6
+          },
+          {
+            "date": "2026-10-09",
+            "start_at": "2026-10-08T14:52:35Z",
+            "end_at": "2026-10-08T22:39:35Z",
+            "sleep_minutes": 459,
+            "deep_minutes": 69,
+            "rem_minutes": 134,
+            "light_minutes": 256,
+            "awake_minutes": 8
+          },
+          {
+            "date": "2026-10-10",
+            "start_at": "2026-10-09T14:16:04Z",
+            "end_at": "2026-10-09T21:59:04Z",
+            "sleep_minutes": 452,
+            "deep_minutes": 49,
+            "rem_minutes": 120,
+            "light_minutes": 283,
+            "awake_minutes": 11
+          },
+          {
+            "date": "2026-10-14",
+            "start_at": "2026-10-13T13:59:56Z",
+            "end_at": "2026-10-13T20:47:56Z",
+            "sleep_minutes": 392,
+            "deep_minutes": 50,
+            "rem_minutes": 99,
+            "light_minutes": 243,
+            "awake_minutes": 16
+          },
+          {
+            "date": "2026-10-15",
+            "start_at": "2026-10-14T14:10:42Z",
+            "end_at": "2026-10-14T21:06:42Z",
+            "sleep_minutes": 394,
+            "deep_minutes": 49,
+            "rem_minutes": 97,
+            "light_minutes": 248,
+            "awake_minutes": 22
+          },
+          {
+            "date": "2026-10-16",
+            "start_at": "2026-10-15T14:53:41Z",
+            "end_at": "2026-10-15T22:23:41Z",
+            "sleep_minutes": 435,
+            "deep_minutes": 67,
+            "rem_minutes": 114,
+            "light_minutes": 254,
+            "awake_minutes": 15
+          },
+          {
+            "date": "2026-10-19",
+            "start_at": "2026-10-18T14:15:01Z",
+            "end_at": "2026-10-18T20:58:01Z",
+            "sleep_minutes": 381,
+            "deep_minutes": 65,
+            "rem_minutes": 94,
+            "light_minutes": 222,
+            "awake_minutes": 22
+          },
+          {
+            "date": "2026-10-20",
+            "start_at": "2026-10-19T14:23:12Z",
+            "end_at": "2026-10-19T20:58:12Z",
+            "sleep_minutes": 380,
+            "deep_minutes": 44,
+            "rem_minutes": 90,
+            "light_minutes": 246,
+            "awake_minutes": 15
+          }
+        ],
+        "daily_ranges": [],
+        "sessions": []
+      },
+      "user_id": "53c433f6-19f8-48ba-8020-09dd66b5df32"
+    },
+    "sleeps/2026-10-09/2026-10-22": {
+      "metric": "sleeps",
+      "period": {
+        "start": "2026-10-09",
+        "end": "2026-10-22"
+      },
+      "unit": "min",
+      "summary": {
+        "avg": 413.29,
+        "daily_min": {
+          "date": "2026-10-20",
+          "value": 380
+        },
+        "daily_max": {
+          "date": "2026-10-09",
+          "value": 459
+        },
+        "total": null,
+        "days_with_data": 7,
+        "days_used_for_summary": 7,
+        "completed_days": 14,
+        "missing_days": [
+          "2026-10-11",
+          "2026-10-12",
+          "2026-10-13",
+          "2026-10-17",
+          "2026-10-18"
+        ],
+        "unsynced_days": [
+          "2026-10-21",
+          "2026-10-22"
+        ],
+        "linked_from": "2026-09-18"
+      },
+      "days": [
+        {
+          "date": "2026-10-09",
+          "value": 459,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-10",
+          "value": 452,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-11",
+          "value": null,
+          "missing": true,
+          "reason": "NO_RECORD",
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-12",
+          "value": null,
+          "missing": true,
+          "reason": "NO_RECORD",
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-13",
+          "value": null,
+          "missing": true,
+          "reason": "NO_RECORD",
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-14",
+          "value": 392,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-15",
+          "value": 394,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-16",
+          "value": 435,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-17",
+          "value": null,
+          "missing": true,
+          "reason": "NO_RECORD",
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-18",
+          "value": null,
+          "missing": true,
+          "reason": "NO_RECORD",
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-19",
+          "value": 381,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-20",
+          "value": 380,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-21",
+          "value": null,
+          "missing": true,
+          "reason": "UNSYNCED",
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-22",
+          "value": null,
+          "missing": true,
+          "reason": "UNSYNCED",
+          "is_in_progress": false
+        }
+      ],
+      "in_progress": null,
+      "data_status": {
+        "last_data_at": "2026-10-19T20:58:12Z",
+        "synced_until": "2026-10-20T14:30:16Z",
+        "last_sync_status": "success",
+        "last_success_at": "2026-10-22T12:00:00Z",
+        "checked_at": "2026-10-22T12:00:00Z"
+      },
+      "detail": {
+        "measured_min": null,
+        "measured_max": null,
+        "nights": [
+          {
+            "date": "2026-10-09",
+            "start_at": "2026-10-08T14:52:35Z",
+            "end_at": "2026-10-08T22:39:35Z",
+            "sleep_minutes": 459,
+            "deep_minutes": 69,
+            "rem_minutes": 134,
+            "light_minutes": 256,
+            "awake_minutes": 8
+          },
+          {
+            "date": "2026-10-10",
+            "start_at": "2026-10-09T14:16:04Z",
+            "end_at": "2026-10-09T21:59:04Z",
+            "sleep_minutes": 452,
+            "deep_minutes": 49,
+            "rem_minutes": 120,
+            "light_minutes": 283,
+            "awake_minutes": 11
+          },
+          {
+            "date": "2026-10-14",
+            "start_at": "2026-10-13T13:59:56Z",
+            "end_at": "2026-10-13T20:47:56Z",
+            "sleep_minutes": 392,
+            "deep_minutes": 50,
+            "rem_minutes": 99,
+            "light_minutes": 243,
+            "awake_minutes": 16
+          },
+          {
+            "date": "2026-10-15",
+            "start_at": "2026-10-14T14:10:42Z",
+            "end_at": "2026-10-14T21:06:42Z",
+            "sleep_minutes": 394,
+            "deep_minutes": 49,
+            "rem_minutes": 97,
+            "light_minutes": 248,
+            "awake_minutes": 22
+          },
+          {
+            "date": "2026-10-16",
+            "start_at": "2026-10-15T14:53:41Z",
+            "end_at": "2026-10-15T22:23:41Z",
+            "sleep_minutes": 435,
+            "deep_minutes": 67,
+            "rem_minutes": 114,
+            "light_minutes": 254,
+            "awake_minutes": 15
+          },
+          {
+            "date": "2026-10-19",
+            "start_at": "2026-10-18T14:15:01Z",
+            "end_at": "2026-10-18T20:58:01Z",
+            "sleep_minutes": 381,
+            "deep_minutes": 65,
+            "rem_minutes": 94,
+            "light_minutes": 222,
+            "awake_minutes": 22
+          },
+          {
+            "date": "2026-10-20",
+            "start_at": "2026-10-19T14:23:12Z",
+            "end_at": "2026-10-19T20:58:12Z",
+            "sleep_minutes": 380,
+            "deep_minutes": 44,
+            "rem_minutes": 90,
+            "light_minutes": 246,
+            "awake_minutes": 15
+          }
+        ],
+        "daily_ranges": [],
+        "sessions": []
+      },
+      "user_id": "53c433f6-19f8-48ba-8020-09dd66b5df32"
+    },
+    "sleeps/2026-10-12/2026-10-18": {
+      "metric": "sleeps",
+      "period": {
+        "start": "2026-10-12",
+        "end": "2026-10-18"
+      },
+      "unit": "min",
+      "summary": {
+        "avg": 407.0,
+        "daily_min": {
+          "date": "2026-10-14",
+          "value": 392
+        },
+        "daily_max": {
+          "date": "2026-10-16",
+          "value": 435
+        },
+        "total": null,
+        "days_with_data": 3,
+        "days_used_for_summary": 3,
+        "completed_days": 7,
+        "missing_days": [
+          "2026-10-12",
+          "2026-10-13",
+          "2026-10-17",
+          "2026-10-18"
+        ],
+        "unsynced_days": [],
+        "linked_from": "2026-09-18"
+      },
+      "days": [
+        {
+          "date": "2026-10-12",
+          "value": null,
+          "missing": true,
+          "reason": "NO_RECORD",
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-13",
+          "value": null,
+          "missing": true,
+          "reason": "NO_RECORD",
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-14",
+          "value": 392,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-15",
+          "value": 394,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-16",
+          "value": 435,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-17",
+          "value": null,
+          "missing": true,
+          "reason": "NO_RECORD",
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-18",
+          "value": null,
+          "missing": true,
+          "reason": "NO_RECORD",
+          "is_in_progress": false
+        }
+      ],
+      "in_progress": null,
+      "data_status": {
+        "last_data_at": "2026-10-19T20:58:12Z",
+        "synced_until": "2026-10-20T14:30:16Z",
+        "last_sync_status": "success",
+        "last_success_at": "2026-10-22T12:00:00Z",
+        "checked_at": "2026-10-22T12:00:00Z"
+      },
+      "detail": {
+        "measured_min": null,
+        "measured_max": null,
+        "nights": [
+          {
+            "date": "2026-10-14",
+            "start_at": "2026-10-13T13:59:56Z",
+            "end_at": "2026-10-13T20:47:56Z",
+            "sleep_minutes": 392,
+            "deep_minutes": 50,
+            "rem_minutes": 99,
+            "light_minutes": 243,
+            "awake_minutes": 16
+          },
+          {
+            "date": "2026-10-15",
+            "start_at": "2026-10-14T14:10:42Z",
+            "end_at": "2026-10-14T21:06:42Z",
+            "sleep_minutes": 394,
+            "deep_minutes": 49,
+            "rem_minutes": 97,
+            "light_minutes": 248,
+            "awake_minutes": 22
+          },
+          {
+            "date": "2026-10-16",
+            "start_at": "2026-10-15T14:53:41Z",
+            "end_at": "2026-10-15T22:23:41Z",
+            "sleep_minutes": 435,
+            "deep_minutes": 67,
+            "rem_minutes": 114,
+            "light_minutes": 254,
+            "awake_minutes": 15
+          }
+        ],
+        "daily_ranges": [],
+        "sessions": []
+      },
+      "user_id": "53c433f6-19f8-48ba-8020-09dd66b5df32"
+    },
+    "sleeps/2026-10-19/2026-10-22": {
+      "metric": "sleeps",
+      "period": {
+        "start": "2026-10-19",
+        "end": "2026-10-22"
+      },
+      "unit": "min",
+      "summary": {
+        "avg": 380.5,
+        "daily_min": {
+          "date": "2026-10-20",
+          "value": 380
+        },
+        "daily_max": {
+          "date": "2026-10-19",
+          "value": 381
+        },
+        "total": null,
+        "days_with_data": 2,
+        "days_used_for_summary": 2,
+        "completed_days": 4,
+        "missing_days": [],
+        "unsynced_days": [
+          "2026-10-21",
+          "2026-10-22"
+        ],
+        "linked_from": "2026-09-18"
+      },
+      "days": [
+        {
+          "date": "2026-10-19",
+          "value": 381,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-20",
+          "value": 380,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-21",
+          "value": null,
+          "missing": true,
+          "reason": "UNSYNCED",
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-22",
+          "value": null,
+          "missing": true,
+          "reason": "UNSYNCED",
+          "is_in_progress": false
+        }
+      ],
+      "in_progress": null,
+      "data_status": {
+        "last_data_at": "2026-10-19T20:58:12Z",
+        "synced_until": "2026-10-20T14:30:16Z",
+        "last_sync_status": "success",
+        "last_success_at": "2026-10-22T12:00:00Z",
+        "checked_at": "2026-10-22T12:00:00Z"
+      },
+      "detail": {
+        "measured_min": null,
+        "measured_max": null,
+        "nights": [
+          {
+            "date": "2026-10-19",
+            "start_at": "2026-10-18T14:15:01Z",
+            "end_at": "2026-10-18T20:58:01Z",
+            "sleep_minutes": 381,
+            "deep_minutes": 65,
+            "rem_minutes": 94,
+            "light_minutes": 222,
+            "awake_minutes": 22
+          },
+          {
+            "date": "2026-10-20",
+            "start_at": "2026-10-19T14:23:12Z",
+            "end_at": "2026-10-19T20:58:12Z",
+            "sleep_minutes": 380,
+            "deep_minutes": 44,
+            "rem_minutes": 90,
+            "light_minutes": 246,
+            "awake_minutes": 15
+          }
+        ],
+        "daily_ranges": [],
+        "sessions": []
+      },
+      "user_id": "53c433f6-19f8-48ba-8020-09dd66b5df32"
+    },
+    "sleeps/2026-10-22/2026-10-22": {
+      "metric": "sleeps",
+      "period": {
+        "start": "2026-10-22",
+        "end": "2026-10-22"
+      },
+      "unit": "min",
+      "summary": {
+        "avg": null,
+        "daily_min": null,
+        "daily_max": null,
+        "total": null,
+        "days_with_data": 0,
+        "days_used_for_summary": 0,
+        "completed_days": 1,
+        "missing_days": [],
+        "unsynced_days": [
+          "2026-10-22"
+        ],
+        "linked_from": "2026-09-18"
+      },
+      "days": [
+        {
+          "date": "2026-10-22",
+          "value": null,
+          "missing": true,
+          "reason": "UNSYNCED",
+          "is_in_progress": false
+        }
+      ],
+      "in_progress": null,
+      "data_status": {
+        "last_data_at": "2026-10-19T20:58:12Z",
+        "synced_until": "2026-10-20T14:30:16Z",
+        "last_sync_status": "success",
+        "last_success_at": "2026-10-22T12:00:00Z",
+        "checked_at": "2026-10-22T12:00:00Z"
+      },
+      "detail": {
+        "measured_min": null,
+        "measured_max": null,
+        "nights": [],
+        "daily_ranges": [],
+        "sessions": []
+      },
+      "user_id": "53c433f6-19f8-48ba-8020-09dd66b5df32"
+    },
+    "steps/2026-10-09/2026-10-22": {
+      "metric": "steps",
+      "period": {
+        "start": "2026-10-09",
+        "end": "2026-10-22"
+      },
+      "unit": "steps",
+      "summary": {
+        "avg": 5808.08,
+        "daily_min": {
+          "date": "2026-10-15",
+          "value": 4324
+        },
+        "daily_max": {
+          "date": "2026-10-14",
+          "value": 10226
+        },
+        "total": 69697.0,
+        "days_with_data": 12,
+        "days_used_for_summary": 12,
+        "completed_days": 13,
+        "missing_days": [],
+        "unsynced_days": [
+          "2026-10-21",
+          "2026-10-22"
+        ],
+        "linked_from": "2026-09-18"
+      },
+      "days": [
+        {
+          "date": "2026-10-09",
+          "value": 5634,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-10",
+          "value": 4651,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-11",
+          "value": 5589,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-12",
+          "value": 5297,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-13",
+          "value": 4591,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-14",
+          "value": 10226,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-15",
+          "value": 4324,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-16",
+          "value": 6044,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-17",
+          "value": 5682,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-18",
+          "value": 5742,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-19",
+          "value": 5655,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-20",
+          "value": 6262,
+          "missing": false,
+          "reason": null,
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-21",
+          "value": null,
+          "missing": true,
+          "reason": "UNSYNCED",
+          "is_in_progress": false
+        },
+        {
+          "date": "2026-10-22",
+          "value": null,
+          "missing": true,
+          "reason": "UNSYNCED",
+          "is_in_progress": true
+        }
+      ],
+      "in_progress": {
+        "date": "2026-10-22",
+        "value": null,
+        "missing": true,
+        "as_of": "2026-10-20T14:30:16Z"
+      },
+      "data_status": {
+        "last_data_at": "2026-10-20T14:30:16Z",
+        "synced_until": "2026-10-20T14:30:16Z",
+        "last_sync_status": "success",
+        "last_success_at": "2026-10-22T12:00:00Z",
+        "checked_at": "2026-10-22T12:00:00Z"
+      },
+      "detail": {
+        "measured_min": null,
+        "measured_max": null,
+        "nights": [],
+        "daily_ranges": [],
+        "sessions": []
+      },
+      "user_id": "53c433f6-19f8-48ba-8020-09dd66b5df32"
+    },
+    "steps/2026-10-21/2026-10-21": {
+      "metric": "steps",
+      "period": {
+        "start": "2026-10-21",
+        "end": "2026-10-21"
+      },
+      "unit": "steps",
+      "summary": {
+        "avg": null,
+        "daily_min": null,
+        "daily_max": null,
+        "total": null,
+        "days_with_data": 0,
+        "days_used_for_summary": 0,
+        "completed_days": 1,
+        "missing_days": [],
+        "unsynced_days": [
+          "2026-10-21"
+        ],
+        "linked_from": "2026-09-18"
+      },
+      "days": [
+        {
+          "date": "2026-10-21",
+          "value": null,
+          "missing": true,
+          "reason": "UNSYNCED",
+          "is_in_progress": false
+        }
+      ],
+      "in_progress": null,
+      "data_status": {
+        "last_data_at": "2026-10-20T14:30:16Z",
+        "synced_until": "2026-10-20T14:30:16Z",
+        "last_sync_status": "success",
+        "last_success_at": "2026-10-22T12:00:00Z",
+        "checked_at": "2026-10-22T12:00:00Z"
+      },
+      "detail": {
+        "measured_min": null,
+        "measured_max": null,
+        "nights": [],
+        "daily_ranges": [],
+        "sessions": []
+      },
+      "user_id": "53c433f6-19f8-48ba-8020-09dd66b5df32"
+    },
+    "steps/2026-10-22/2026-10-22": {
+      "metric": "steps",
+      "period": {
+        "start": "2026-10-22",
+        "end": "2026-10-22"
+      },
+      "unit": "steps",
+      "summary": {
+        "avg": null,
+        "daily_min": null,
+        "daily_max": null,
+        "total": null,
+        "days_with_data": 0,
+        "days_used_for_summary": 0,
+        "completed_days": 0,
+        "missing_days": [],
+        "unsynced_days": [
+          "2026-10-22"
+        ],
+        "linked_from": "2026-09-18"
+      },
+      "days": [
+        {
+          "date": "2026-10-22",
+          "value": null,
+          "missing": true,
+          "reason": "UNSYNCED",
+          "is_in_progress": true
+        }
+      ],
+      "in_progress": {
+        "date": "2026-10-22",
+        "value": null,
+        "missing": true,
+        "as_of": "2026-10-20T14:30:16Z"
+      },
+      "data_status": {
+        "last_data_at": "2026-10-20T14:30:16Z",
+        "synced_until": "2026-10-20T14:30:16Z",
+        "last_sync_status": "success",
+        "last_success_at": "2026-10-22T12:00:00Z",
+        "checked_at": "2026-10-22T12:00:00Z"
+      },
+      "detail": {
+        "measured_min": null,
+        "measured_max": null,
+        "nights": [],
+        "daily_ranges": [],
+        "sessions": []
+      },
+      "user_id": "53c433f6-19f8-48ba-8020-09dd66b5df32"
+    }
+  }
+}
